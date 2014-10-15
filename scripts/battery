@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+def get(var):
+    with open('/sys/class/power_supply/BAT0/' + var, 'r') as f:
+        return float(f.read().strip())
+
+print("%d%%" % (get('charge_now') / get('charge_full') * 100))

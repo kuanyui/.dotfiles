@@ -1,0 +1,14 @@
+[user]
+	name = kuanyui
+	email = azazabc123@gmail.com
+[credential]
+	helper = cache --timeout=3600
+[color]
+	ui = auto
+[core]
+	quotepath = off
+[i18n]
+	logoutputencoding = utf8
+	commitencoding = utf8
+[push]
+	default = current

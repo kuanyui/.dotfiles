@@ -1,0 +1,113 @@
+set complete=lsf
+set editor=emacsclient
+set go=bCrs
+"set hintkeys="asdfghjkl"
+set stal=always
+set titlestring=
+set hlfind
+
+" next/prev link patterns
+set nextpattern=\s*下(一|\ )?(頁|篇|页)\s*,^\b(n|N)ext\b,\\b(n|N)ext\\b,^>$,^(>>|»)$,^(>|»),(>|»)$,\\bmore\\b,次へ
+set previouspattern=\s*上(一|\ )?(頁|篇|页)\s*,^\b(p|P)rev|(p|P)revious\b,\\b(p|P)rev|(p|P)revious\\b,^<$,^(<<|«)$,^(<|«),(<|«)$,前へ
+
+highlight -a Hint text-transform: uppercase
+
+map -b <A-x> :
+map -b -m base,caret,normal,visual <C-g> <Esc>
+
+map -b -m base,normal,caret,insert,visual <C-n> <Down>
+map -b -m base,normal,caret,insert,visual <C-p> <Up>
+map -b -m caret,insert,visual <C-b> <Left>
+map -b -m caret,insert,visual <C-f> <Right>
+
+map -b -m command-line <C-n> <Tab>
+map -b -m command-line <C-p> <S-Tab>
+
+map -b -m command,command-line,insert <C-/> <C-v><C-z>
+map -b -m command,caret,command-line,insert,visual <A-w> <C-v><C-c>
+map -b -m command,command-line,insert <C-w> <C-v><C-x>
+map -b -m command,command-line,insert <C-y> <C-v><C-v>
+
+map -b -m normal,caret,i,visual <A-<> gg
+map -b -m normal,caret,i,visual <A->> G
+map -b <A-v> <C-u>
+map -b <A-w> y
+
+map -b <C-x><C-_> u
+map -b <C-a> 0
+map -b -m normal <C-b> <A-left>
+map -b <C-e> $
+map -b -m normal <C-f> <A-right>
+map -b <C-x><C-left> gT
+map -b <C-x><C-right> gt
+map -b <C-r> ?
+map -b <C-s> /
+map -b <C-v> <C-d>
+map -b <C-w> Y
+map -b <C-y> P
+
+map -b <C-x>~ ~
+map -b <C-x>b <C-^>
+map -b <C-x>e gF
+map -b <C-x>g gf
+map -b <C-x>h gh
+map -b <C-x>i gi
+map -b <C-x>k d
+map -b <C-x>m ;c
+map -b <C-x>p ;i
+map -b <C-x>r r
+map -b <C-x>R R
+map -b <C-x>u gu
+
+javascript <<END_OF_SCRIPT
+	userContext.confirm_and_quit = function confirm_and_quit() {
+		quit = confirm("Quit Firefox?");
+		if (quit)
+			commands.get("xall").action();
+	};
+END_OF_SCRIPT
+
+map -b <C-x><C-b> b
+map -b <C-x><C-c> :js confirm_and_quit()<CR>
+map -b <C-x><C-f> t
+" map -b <C-x><C-r> :restart<CR>
+map -b <C-x><C-t> t
+map -b <C-x><C-u> gU
+map -b <C-x><C-v> O
+
+" C-x C-s starts the "Save as" dialog
+map -b <C-x><C-s> :saveas<CR>
+
+map <C-d> <Nop>
+map <C-u> <Nop>
+map <C-x> <Nop>
+map <C-h> <Nop>
+map : <Nop>
+map ~ <Nop>
+map / <Nop>
+map ? <Nop>
+map $ <Nop>
+map 0 <Nop>
+map b <Nop>
+map B <Nop>
+map d <Nop>
+"map F <Nop>
+map gg <Nop>
+map gh <Nop>
+map gi <Nop>
+map gU <Nop>
+map G <Nop>
+map j <Nop>
+map k <Nop>
+map o <Nop>
+map O <Nop>
+map p <Nop>
+map P <Nop>
+map q <Nop>
+map r <Nop>
+map t <Nop>
+map u <Nop>
+map w <Nop>
+map y <Nop>
+map Y <Nop>
+map ZZ <Nop>

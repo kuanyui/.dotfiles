@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+
+import time
+import sys
+
+def getCpuTime():
+    totaltime = 0
+    idletime = 0
+    with open("/proc/stat", "r") as f:
+        for line in f:
+            fields = line.split()
+            if fields[0] == "cpu": # the first field is "cpu"
+                # sum up other fields
+                totaltime += sum([int(a) for a in fields[1:]])
+                # idle time is the 5th field (field 4)
+                idletime = int(fields[4])
+                break
+    return totaltime, idletime
+
+# read cpu time
+totaltime1, idletime1 = getCpuTime()
+
+# pause for a short time
+interval = 100 # milliseconds
+time.sleep(interval / 1000.0)
+
+# read cpu time
+totaltime2, idletime2 = getCpuTime()
+
+# compute the difference
+difftotal = totaltime2 - totaltime1
+diffidle = idletime2 - idletime1
+diffbusy = difftotal - diffidle
+
+# print the result
+usage_percentage = float(diffbusy) / difftotal * 100
+print("%.1f%%" % (usage_percentage))

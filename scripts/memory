@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+ 
+info = {}
+with open("/proc/meminfo", "r") as f:
+    for line in f:
+        fields = line.split()
+        name = fields[0].strip(":")
+        value = int(fields[1]) # value in kB
+        info[name] = value
+ 
+memtotal = info["MemTotal"]
+ 
+free = info["MemFree"] + info["Buffers"] + info["Cached"]
+usage = memtotal - free
+ 
+print("%d M/%d M" % (usage / 1000, memtotal / 1000))

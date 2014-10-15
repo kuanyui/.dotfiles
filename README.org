@@ -1,0 +1,50 @@
+* dotfiles ~ ˊ・ω・ˋ
+
+  This is the dotfiles, scripts, small tools for my personal usage, so without any warranty surely ˊ・ω・ˋ
+  
+  My configuration files for *Emacs* are in [[http://github.com/kuanyui/.emacs.d][another repository]].
+
+** Setup
+
+   #+BEGIN_QUOTE
+   =make= (=autotools=) and =git= are required for setup.
+   #+END_QUOTE
+
+*** dotfiles
+
+    Install scripts (into =~/.scripts=) and configure files.
+    
+    Including configure files for:
+
+    - zsh
+    - tmux
+    - git
+    - mercurial
+
+    #+BEGIN_SRC sh
+    make dotfiles
+    #+END_SRC
+
+*** openSUSE
+    
+    Install essential packages under openSUSE.
+
+    #+BEGIN_SRC sh
+make suse-packages
+# Install restricted codecs
+make suse-codecs
+# The solution for fail of mounting loop device:
+make loop
+    #+END_SRC
+
+*** Patched Font for Powerline
+
+    #+BEGIN_SRC sh
+    make powerline-font
+    #+END_SRC
+
+* Todos
+  
+  - A free audio file for =countdown= and =timer=.
+  - 3rd repositories. e.g. QWinFF, VirtualBox...
+  - KDE configure files.
