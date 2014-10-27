@@ -1,0 +1,22 @@
+
+colorscheme solarized-dark
+
+" next/prev link patterns
+set nextpattern=\s*下(一|\ )?(頁|篇|页)\s*,^\b(n|N)ext\b,\\b(n|N)ext\\b,^>$,^(>>|»)$,^(>|»),(>|»)$,\\bmore\\b,次へ
+set previouspattern=\s*上(一|\ )?(頁|篇|页)\s*,^\b(p|P)rev|(p|P)revious\b,\\b(p|P)rev|(p|P)revious\\b,^<$,^(<<|«)$,^(<|«),(<|«)$,前へ
+
+" [stylish] toggle custom styles
+javascript <<EOF
+userContext.stylish_toggle_custom_styles = function() {
+	var prefs = Components.classes["@mozilla.org/preferences-service;1"]
+		.getService(Components.interfaces.nsIPrefBranch)
+		.prefHasUserValue("extensions.stylish.styleRegistrationEnabled");
+	if (prefs){
+		stylishOverlay.turnOnOff(true);
+	} else {
+		stylishOverlay.turnOnOff(false);
+	}
+}
+EOF
+
+nmap <C-A-s> :javascript stylish_toggle_custom_styles()<CR>

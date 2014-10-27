@@ -10,6 +10,8 @@ dotfiles :
 	ln -s "${current_dir}/.tmux.conf" ~/
 	ln -s "${current_dir}/.zshrc" ~/
 	ln -s "${current_dir}/scripts" ~/.scripts
+	ln -s "${current_dir}/pentadactyl/" ~/.pentadactyl
+	ln -s "${current_dir}/.pentadactylrc" ~/.pentadactylrc
 
 powerline-font :
 	git clone https://github.com/Lokaltog/powerline-fonts.git
