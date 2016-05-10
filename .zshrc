@@ -16,11 +16,14 @@ setopt MENUCOMPLETE
 setopt ALL_EXPORT
 
 # Set/unset  shell options
+setopt   correct
+#setopt   correctall
 setopt   notify globdots correct pushdtohome cdablevars autolist
-setopt   correctall autocd recexact longlistjobs
-setopt   autoresume histignoredups pushdsilent 
+setopt   recexact longlistjobs
+setopt   autoresume histignoredups pushdsilent
 setopt   autopushd pushdminus extendedglob rcquotes mailwarning
 unsetopt bgnice autoparamslash
+unsetopt autocd
 ##############################
 setopt   interactivecomments
 ##############################
@@ -102,7 +105,7 @@ alias hnb-partecs='hnb $HOME/partecs/partecs-hnb.xml'
 alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/python-docutils/s5_html/themes/default/print.css'
 #if [[ $HOSTNAME == "kamna" ]] {
 #	alias emacs='emacs -l ~/.emacs.kamna'
-#}	
+#}
 
 # alias	=clear
 
@@ -135,7 +138,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORSe}
 zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
 zstyle ':completion:*' menu select=1 _complete _ignored _approximate
 zstyle -e ':completion:*:approximate:*' max-errors \
-    'reply=( $(( ($#PREFIX+$#SUFFIX)/2 )) numeric )'
+       'reply=( $(( ($#PREFIX+$#SUFFIX)/2 )) numeric )'
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
 
 # Completion Styles
@@ -145,8 +148,8 @@ zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 
 # allow one error for every three characters typed in approximate completer
 zstyle -e ':completion:*:approximate:*' max-errors \
-    'reply=( $(( ($#PREFIX+$#SUFFIX)/2 )) numeric )'
-    
+       'reply=( $(( ($#PREFIX+$#SUFFIX)/2 )) numeric )'
+
 # insert all expansions for expand completer
 zstyle ':completion:*:expand:*' tag-order all-expansions
 
@@ -173,42 +176,42 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 #zstyle ':completion:*:processes' command 'ps ax -o pid,s,nice,stime,args | sed "/ps/d"'
 zstyle ':completion:*:*:kill:*:processes' command 'ps --forest -A -o pid,user,cmd'
-zstyle ':completion:*:processes-names' command 'ps axho command' 
+zstyle ':completion:*:processes-names' command 'ps axho command'
 #zstyle ':completion:*:urls' local 'www' '/var/www/htdocs' 'public_html'
 #
 #NEW completion:
 # 1. All /etc/hosts hostnames are in autocomplete
 # 2. If you have a comment in /etc/hosts like #%foobar.domain,
 #    then foobar.domain will show up in autocomplete!
-zstyle ':completion:*' hosts $(awk '/^[^#]/ {print $2 $3" "$4" "$5}' /etc/hosts | grep -v ip6- && grep "^#%" /etc/hosts | awk -F% '{print $2}') 
+zstyle ':completion:*' hosts $(awk '/^[^#]/ {print $2 $3" "$4" "$5}' /etc/hosts | grep -v ip6- && grep "^#%" /etc/hosts | awk -F% '{print $2}')
 # Filename suffixes to ignore during completion (except after rm command)
 zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o' '*?.c~' \
-    '*?.old' '*?.pro'
+       '*?.old' '*?.pro'
 # the same for old style completion
 #fignore=(.o .c~ .old .pro)
 
 # ignore completion functions (until the _ignored completer)
 zstyle ':completion:*:functions' ignored-patterns '_*'
 zstyle ':completion:*:*:*:users' ignored-patterns \
-        adm apache bin daemon games gdm halt ident junkbust lp mail mailnull \
-        named news nfsnobody nobody nscd ntp operator pcap postgres radvd \
-        rpc rpcuser rpm shutdown squid sshd sync uucp vcsa xfs avahi-autoipd\
-        avahi backup messagebus beagleindex debian-tor dhcp dnsmasq fetchmail\
-        firebird gnats haldaemon hplip irc klog list man cupsys postfix\
-        proxy syslog www-data mldonkey sys snort
+       adm apache bin daemon games gdm halt ident junkbust lp mail mailnull \
+       named news nfsnobody nobody nscd ntp operator pcap postgres radvd \
+       rpc rpcuser rpm shutdown squid sshd sync uucp vcsa xfs avahi-autoipd\
+       avahi backup messagebus beagleindex debian-tor dhcp dnsmasq fetchmail\
+       firebird gnats haldaemon hplip irc klog list man cupsys postfix\
+       proxy syslog www-data mldonkey sys snort
 # SSH Completion
 zstyle ':completion:*:scp:*' tag-order \
-   files users 'hosts:-host hosts:-domain:domain hosts:-ipaddr"IP\ Address *'
+       files users 'hosts:-host hosts:-domain:domain hosts:-ipaddr"IP\ Address *'
 zstyle ':completion:*:scp:*' group-order \
-   files all-files users hosts-domain hosts-host hosts-ipaddr
+       files all-files users hosts-domain hosts-host hosts-ipaddr
 zstyle ':completion:*:ssh:*' tag-order \
-   users 'hosts:-host hosts:-domain:domain hosts:-ipaddr"IP\ Address *'
+       users 'hosts:-host hosts:-domain:domain hosts:-ipaddr"IP\ Address *'
 zstyle ':completion:*:ssh:*' group-order \
-   hosts-domain hosts-host users hosts-ipaddr
+       hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
 
 function command_not_found_handle() {
-  /usr/bin/python /usr/lib/command-not-found -- $1 
+    /usr/bin/python /usr/lib/command-not-found -- $1
 }
 
 alias emacs='emacs -nw'
@@ -263,10 +266,55 @@ alias mergepdf='pdfunite'
 alias rpmlargest="rpm -qa --queryformat '%10{SIZE}\t%{NAME}\n' | sort -k1,1n"
 alias jk='jkbiv'
 alias ff-addon-dev="cd ~/temp/addon-sdk-1.16/;source bin/activate;cd"
-alias yd='youtube-dl --no-mtime'
+alias youtube='cd; youtube-dl --no-mtime'
+alias yt='cd; youtube-dl --no-mtime'
+alias youtube18='cd; youtube-dl --no-mtime -f 18'
+alias youtube22='cd; youtube-dl --no-mtime -f 22'
+
 
 newer (){ ls -dt "$@" | head -1 ;}
 alias nr='newer'
 alias nt='newer *'
 
 alias delete-backup-files='find . -name "*~" | xargs rm'
+
+cl() { cd "$@" && ls; }
+
+
+alias source-venv='source ./venv/bin/activate'
+
+# Settings for Wine
+#export WINEARCH=win32
+
+# ls after cd
+function chpwd() {
+    emulate -L zsh
+    if [[ $(ls -a | wc -l) -lt 100 ]] ; then
+        ls -a
+    else
+        echo ''
+    fi
+}
+
+
+alias moni='cd ~/Django/Moni/Moni;source ../venv/bin/activate;./manage.py runserver'
+alias alarm='countdown.rb -e "mplayer -volume 100 ${HOME}/音樂/Other/National\ Anthem\ of\ USSR.flv" -t "Wake Up!"'
+
+TERM=xterm-256color
+
+alias npm-venv='export PATH=$(npm bin):$PATH'
+alias set-lang-to-en='LC_ALL=en_US.utf8;LANG=en_US.utf8;LANGUAGE=en_US.utf8'
+
+
+
+eval $(thefuck --alias) in your ~/.zshrc
+alias ff='firefox -P'
+
+
+alias wine32='WINEPREFIX=~/.wine32;WINEARCH=win32;wine'
+alias wine64='WINEPREFIX=~/.wine;WINEARCH= ;wine'
+
+
+alias transcription-pdf-update='cp -u -v ~/University/Transcription/PDF/* ~/source-kuanyui.github.io/source/transcription/;cd ~/source-kuanyui.github.io/;npm-venv;hxd'
+alias piano-save='cd ~/University/;git add *.mscz;git commit;bgit push'
+alias zs='source ~/.zshrc'
