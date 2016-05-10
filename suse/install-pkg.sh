@@ -67,6 +67,7 @@ synapse-lang
 texlive
 texlive-xecjk
 texlive-multirow
+tmux
 tig
 umplayer
 umplayer-lang
