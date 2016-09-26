@@ -27,7 +27,7 @@ unsetopt autocd
 ##############################
 setopt   interactivecomments
 ##############################
-eval $(dircolors -b)
+
 export ZLSCOLORS="${LS_COLORS}"
 #zmodload zsh/complist
 #zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
@@ -99,7 +99,7 @@ alias slrn="slrn -n"
 #alias man='LC_ALL=C LANG=C man'
 alias f=finger
 alias ll='ls -al'
-alias ls='ls --color=auto '
+#alias ls='ls --color=auto '
 alias offlineimap-tty='offlineimap -u TTY.TTYUI'
 alias hnb-partecs='hnb $HOME/partecs/partecs-hnb.xml'
 alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/python-docutils/s5_html/themes/default/print.css'
@@ -250,7 +250,7 @@ alias hs='history | grep --color=auto'
 
 # Open github web page of current git repo
 alias githubopen="kde-open \`git remote -v | grep github.com | grep fetch | head -1 | field 2 | sed 's/git:/http:/g'\`"
-alias rm='rm -I'
+#alias rm='rm -i'
 
 
 alias sys-suspend="dbus-send --print-reply --dest='org.freedesktop.PowerManagement' /org/freedesktop/PowerManagement org.freedesktop.PowerManagement.Suspend"
@@ -286,17 +286,8 @@ alias source-venv='source ./venv/bin/activate'
 # Settings for Wine
 #export WINEARCH=win32
 
-# ls after cd
-function chpwd() {
-    emulate -L zsh
-    if [[ $(ls -a | wc -l) -lt 100 ]] ; then
-        ls -a
-    else
-        echo ''
-    fi
-}
-
-
+  
+  
 alias moni='cd ~/Django/Moni/Moni;source ../venv/bin/activate;./manage.py runserver'
 alias alarm='countdown.rb -e "mplayer -volume 100 ${HOME}/音樂/Other/National\ Anthem\ of\ USSR.flv" -t "Wake Up!"'
 
@@ -307,7 +298,7 @@ alias set-lang-to-en='LC_ALL=en_US.utf8;LANG=en_US.utf8;LANGUAGE=en_US.utf8'
 
 
 
-eval $(thefuck --alias) in your ~/.zshrc
+#eval $(thefuck --alias)
 alias ff='firefox -P'
 
 
