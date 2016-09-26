@@ -266,10 +266,10 @@ alias mergepdf='pdfunite'
 alias rpmlargest="rpm -qa --queryformat '%10{SIZE}\t%{NAME}\n' | sort -k1,1n"
 alias jk='jkbiv'
 alias ff-addon-dev="cd ~/temp/addon-sdk-1.16/;source bin/activate;cd"
-alias youtube='cd; youtube-dl --no-mtime'
-alias yt='cd; youtube-dl --no-mtime'
-alias youtube18='cd; youtube-dl --no-mtime -f 18'
-alias youtube22='cd; youtube-dl --no-mtime -f 22'
+alias youtube='youtube-dl --no-mtime'
+alias yt='youtube-dl --no-mtime'
+alias youtube18='youtube-dl --no-mtime -f 18'
+alias youtube22='youtube-dl --no-mtime -f 22'
 
 
 newer (){ ls -dt "$@" | head -1 ;}
@@ -318,3 +318,10 @@ alias wine64='WINEPREFIX=~/.wine;WINEARCH= ;wine'
 alias transcription-pdf-update='cp -u -v ~/University/Transcription/PDF/* ~/source-kuanyui.github.io/source/transcription/;cd ~/source-kuanyui.github.io/;npm-venv;hxd'
 alias piano-save='cd ~/University/;git add *.mscz;git commit;bgit push'
 alias zs='source ~/.zshrc'
+
+alias wkhtmltopdf='~/.wkhtmltox/bin/wkhtmltopdf'
+
+alias intrising-git-clone='git clone --config user.name=kuanyen --config user.email=kuanyen@intrising.com.tw $@'
+
+alias wtf="sudo ifconfig eth0 192.168.2.234"
+alias wlanweb="sudo ifconfig eth0 192.168.14.234"
