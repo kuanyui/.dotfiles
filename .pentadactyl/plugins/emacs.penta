@@ -24,14 +24,14 @@ map -b -m command-line <C-n> <Tab>
 map -b -m command-line <C-p> <S-Tab>
 
 map -b -m command,command-line,insert <C-/> <C-v><C-z>
-map -b -m command,caret,command-line,insert,visual <A-w> <C-v><C-c>
+map -b -m command,caret,command-line,insert,visual <C-w> <C-v><C-c>
 map -b -m command,command-line,insert <C-w> <C-v><C-x>
 map -b -m command,command-line,insert <C-y> <C-v><C-v>
 
 map -b -m normal,caret,i,visual <A-<> gg
 map -b -m normal,caret,i,visual <A->> G
 map -b <A-v> <C-u>
-map -b <A-w> y
+" map -b <A-w> y
 
 map -b <C-x><C-_> u
 map -b <C-a> 0
@@ -108,6 +108,6 @@ map r <Nop>
 map t <Nop>
 map u <Nop>
 map w <Nop>
-map y <Nop>
+" map y <Nop>
 map Y <Nop>
 map ZZ <Nop>

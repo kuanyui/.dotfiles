@@ -1,5 +1,4 @@
-
-colorscheme solarized-dark
+" colorscheme solarized-dark
 
 " next/prev link patterns
 set nextpattern=\s*下(一|\ )?(頁|篇|页)\s*,^\b(n|N)ext\b,\\b(n|N)ext\\b,^>$,^(>>|»)$,^(>|»),(>|»)$,\\bmore\\b,次へ
