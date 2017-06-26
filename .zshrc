@@ -56,7 +56,8 @@ zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 #zmodload -ap zsh/mapfile mapfile
 
-PATH="$PATH:$HOME/.cabal/bin:$HOME/.scripts"
+export GOPATH=$HOME/gopath
+PATH="$PATH:$HOME/.cabal/bin:$HOME/.scripts:$GOPATH/bin"
 TZ="Asia/Taipei"
 HISTFILE=$HOME/.zhistory
 HISTSIZE=1000
@@ -286,8 +287,8 @@ alias source-venv='source ./venv/bin/activate'
 # Settings for Wine
 #export WINEARCH=win32
 
-  
-  
+
+
 alias moni='cd ~/Django/Moni/Moni;source ../venv/bin/activate;./manage.py runserver'
 alias alarm='countdown.rb -e "mplayer -volume 100 ${HOME}/音樂/Other/National\ Anthem\ of\ USSR.flv" -t "Wake Up!"'
 
@@ -316,3 +317,30 @@ alias intrising-git-clone='git clone --config user.name=kuanyen --config user.em
 
 alias wtf="sudo ifconfig eth0 192.168.2.234"
 alias wlanweb="sudo ifconfig eth0 192.168.14.234"
+
+[[ -s "/Users/onohiroko/.gvm/scripts/gvm" ]] && source "/Users/onohiroko/.gvm/scripts/gvm"
+export GOPATH=$HOME/gopath
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+core1-server() {
+    if [ -z $1 ]
+    then echo "[Usage]"
+         echo "core1-server 192.168.16.140"
+         return -1
+    fi
+    nvm use v0.8.26;
+    cd ~/intrising/swixweb/;
+    echo "root@$1" > dtargets.lst;
+    cd lib;
+    PORT=7999 node app.js
+}
+core1-watch() {
+    nvm use v0.8.26;
+    cd ~/intrising/swixweb/;
+    cake watchviews;
+}
