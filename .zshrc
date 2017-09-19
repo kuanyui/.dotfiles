@@ -337,10 +337,37 @@ core1-server() {
     cd ~/intrising/swixweb/;
     echo "root@$1" > dtargets.lst;
     cd lib;
-    PORT=7999 node app.js
+    PORT=7999 HTTPSPORT=8443  node app.js
 }
 core1-watch() {
     nvm use v0.8.26;
     cd ~/intrising/swixweb/;
     cake watchviews;
 }
+
+
+# Why OSX has no color by default?
+export CLICOLOR='true'
+export LSCOLORS="ExfxcxdxCxegedabagacEd"
+#                1 2 3 4 5 6 7 8 9 0 1
+
+# 1. directory
+# 2. symbolic link
+# 3. socket
+# 4. pipe
+# 5. executable
+# 6. block special
+# 7. character special
+# 8. executable with setuid bit set
+# 9. executable with setgid bit set
+# 10. directory writable to others, with sticky bit
+# 11. directory writable to others, without sticky bit
+
+# a -> black
+# b -> red
+# c -> green
+# d -> brown
+# e -> blue
+# f -> magenta
+# g -> cyan
+# h -> light grey
