@@ -100,7 +100,7 @@ alias slrn="slrn -n"
 #alias man='LC_ALL=C LANG=C man'
 alias f=finger
 alias ll='ls -al'
-#alias ls='ls --color=auto '
+alias ls='ls --color=auto '
 alias offlineimap-tty='offlineimap -u TTY.TTYUI'
 alias hnb-partecs='hnb $HOME/partecs/partecs-hnb.xml'
 alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/python-docutils/s5_html/themes/default/print.css'
@@ -326,7 +326,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-
 core1-server() {
     if [ -z $1 ]
     then echo "[Usage]"
@@ -371,3 +370,48 @@ export LSCOLORS="ExfxcxdxCxegedabagacEd"
 # f -> magenta
 # g -> cyan
 # h -> light grey
+
+
+
+#   \e[ : Start color scheme.
+#   x;y : Color pair to use (x;y)
+#   $PS1 : Your shell prompt variable.
+#   \e[m : Stop color scheme.
+
+# https://unix.stackexchange.com/questions/249374/bash-store-color-codes-in-variable
+
+# tput Color Capabilities:
+#
+#     tput setab [1-7] – Set a background color using ANSI escape
+#     tput setb [1-7] – Set a background color
+#     tput setaf [1-7] – Set a foreground color using ANSI escape
+#     tput setf [1-7] – Set a foreground color
+#
+# tput Text Mode Capabilities:
+#
+#     tput bold – Set bold mode
+#     tput dim – turn on half-bright mode
+#     tput smul – begin underline mode
+#     tput rmul – exit underline mode
+#     tput rev – Turn on reverse mode
+#     tput smso – Enter standout mode (bold on rxvt)
+#     tput rmso – Exit standout mode
+#     tput sgr0 – Turn off all attributes
+#
+# Color Code for tput:
+#
+#     0 – Black
+#     1 – Red
+#     2 – Green
+#     3 – Yellow
+#     4 – Blue
+#     5 – Magenta
+#     6 – Cyan
+#     7 – White
+
+### `tput` broken auto-complete of zsh...... orz
+# alias set-company-git-ssh='export GIT_SSH_COMMAND="ssh -i ~/.ssh/intrising";
+#                            export PS1="${PS1}$(tput setaf 6)(git-ssh-key: intrising)$(tput setaf 7) "'
+#
+alias set-company-git-ssh='export GIT_SSH_COMMAND="ssh -i ~/.ssh/intrising";
+                           export PS1="${PS1} company ==> "'
