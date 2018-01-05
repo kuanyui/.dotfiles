@@ -3,22 +3,24 @@
   <style name="Text" foreground="#4d4d4c" background="#fafafa"/>
   <style name="Link" foreground="#4271ae"/>
   <style name="Selection" foreground="#4d4d4c" background="#d6d6d6"/>
-  <style name="LineNumber" foreground="#a9a9a9"/>
+  <style name="LineNumber" foreground="#544e20" background="#e9e5c9"/>
   <style name="SearchResult" foreground="#4d4d4c" background="#eab700"/>
   <style name="SearchScope" foreground="#4d4d4c"/>
   <style name="Parentheses" foreground="#4d4d4c" background="#d6d6d6"/>
   <style name="ParenthesesMismatch" foreground="#000000" background="#ff00ff"/>
+  <style name="AutoComplete" foreground="#000080" background="#c0c0ff"/>
   <style name="CurrentLine" foreground="#4d4d4c" background="#d6d6d6"/>
-  <style name="CurrentLineNumber" foreground="#a52a2a" bold="true"/>
+  <style name="CurrentLineNumber" foreground="#e4e0bc" background="#423e16" bold="true"/>
   <style name="Occurrences" foreground="#ffffff" background="#d0671f"/>
-  <style name="Occurrences.Unused" foreground="#4d4d4c"/>
+  <style name="Occurrences.Unused" foreground="#ffeac6" background="#f97800"/>
   <style name="Occurrences.Rename" foreground="#4d4d4c"/>
   <style name="Number" foreground="#539af5"/>
   <style name="String" foreground="#718c00"/>
   <style name="Type" foreground="#1daeae"/>
-  <style name="Local" foreground="#4d4d4c"/>
+  <style name="Local" foreground="#fc951e"/>
+  <style name="Global" bold="true"/>
   <style name="Field" foreground="#955089"/>
-  <style name="Static" foreground="#f5871f"/>
+  <style name="Static" foreground="#f5871f" bold="true"/>
   <style name="VirtualMethod" foreground="#4271ae" italic="true"/>
   <style name="Function" foreground="#4271ae"/>
   <style name="Keyword" foreground="#c82829" bold="true"/>
@@ -57,5 +59,6 @@
   <style name="WarningContext" underlineColor="#ffbe00" underlineStyle="DotLine"/>
   <style name="Error" underlineColor="#ff0000" underlineStyle="SingleUnderline"/>
   <style name="ErrorContext" underlineColor="#ff0000" underlineStyle="DotLine"/>
+  <style name="Declaration"/>
   <style name="LastStyleSentinel" foreground="#8e908c"/>
 </style-scheme>
