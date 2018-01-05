@@ -287,8 +287,12 @@ alias source-venv='source ./venv/bin/activate'
 # Settings for Wine
 #export WINEARCH=win32
 
-alias forb-lock='chmod 000 ~/Picture/.forbiddence/*; chmod 000 ~/Picture/.forbiddence/;'
-alias forb-unlock='sudo chmod 700 ~/Picture/.forbiddence/; chmod 600 ~/Picture/.forbiddence/*'
+alias forb-lock='cd ~/Picture/.forbiddence/;
+                 find . -type f | xargs -d "\n" chmod 000;
+                 find . -type d | xargs -d "\n" chmod 000'
+alias forb-unlock='cd ~/Picture/.forbiddence/;
+                   sudo find . -type d | sudo xargs -d "\n" chmod 700;
+                   sudo find . -type f | sudo xargs -d "\n" chmod 600;'
 
 alias moni='cd ~/Django/Moni/Moni;source ../venv/bin/activate;./manage.py runserver'
 alias alarm='countdown.rb -e "mplayer -volume 100 ${HOME}/音樂/Other/National\ Anthem\ of\ USSR.flv" -t "Wake Up!"'
