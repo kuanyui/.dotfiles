@@ -287,7 +287,8 @@ alias source-venv='source ./venv/bin/activate'
 # Settings for Wine
 #export WINEARCH=win32
 
-
+alias forb-lock='chmod 000 ~/Picture/.forbiddence/*; chmod 000 ~/Picture/.forbiddence/;'
+alias forb-unlock='sudo chmod 700 ~/Picture/.forbiddence/; chmod 600 ~/Picture/.forbiddence/*'
 
 alias moni='cd ~/Django/Moni/Moni;source ../venv/bin/activate;./manage.py runserver'
 alias alarm='countdown.rb -e "mplayer -volume 100 ${HOME}/音樂/Other/National\ Anthem\ of\ USSR.flv" -t "Wake Up!"'
@@ -325,6 +326,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+alias sz="source ~/.zshrc"
 
 core1-server() {
     if [ -z $1 ]
@@ -333,14 +335,16 @@ core1-server() {
          return -1
     fi
     nvm use v0.8.26;
-    cd ~/intrising/swixweb/;
+    cd ~/Intrising/swixweb/;
     echo "root@$1" > dtargets.lst;
     cd lib;
     PORT=7999 HTTPSPORT=8443  node app.js
 }
 core1-watch() {
     nvm use v0.8.26;
-    cd ~/intrising/swixweb/;
+    cd ~/Intrising/swixweb/;
+    cake build;
+    cake buildviews;
     cake watchviews;
 }
 
