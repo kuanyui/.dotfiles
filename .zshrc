@@ -57,7 +57,7 @@ zmodload -a zsh/zprof zprof
 #zmodload -ap zsh/mapfile mapfile
 
 export GOPATH=$HOME/gopath
-PATH="$PATH:$HOME/.cabal/bin:$HOME/.scripts:$GOPATH/bin"
+PATH="$PATH:$HOME/.cabal/bin:$HOME/.dotfiles/scripts:$GOPATH/bin"
 TZ="Asia/Taipei"
 HISTFILE=$HOME/.zhistory
 HISTSIZE=1000
