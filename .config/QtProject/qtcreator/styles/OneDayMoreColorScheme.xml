@@ -13,7 +13,7 @@
   <style name="CurrentLineNumber" foreground="#e4e0bc" background="#423e16" bold="true"/>
   <style name="Occurrences" foreground="#ffffff" background="#d0671f"/>
   <style name="Occurrences.Unused" foreground="#ffeac6" background="#f97800"/>
-  <style name="Occurrences.Rename" foreground="#4d4d4c"/>
+  <style name="Occurrences.Rename" foreground="#4d4d4c" background="#ffd3a6"/>
   <style name="Number" foreground="#539af5"/>
   <style name="String" foreground="#718c00"/>
   <style name="Type" foreground="#1daeae"/>
@@ -28,9 +28,9 @@
   <style name="Operator" foreground="#3e999f"/>
   <style name="Preprocessor" foreground="#8959a8"/>
   <style name="Label" foreground="#4d4d4c" bold="true"/>
-  <style name="Comment" foreground="#8e908c"/>
-  <style name="Doxygen.Comment" foreground="#4d4d4c"/>
-  <style name="Doxygen.Tag" foreground="#8e908c"/>
+  <style name="Comment" foreground="#909090" italic="true"/>
+  <style name="Doxygen.Comment" foreground="#ff4b4b"/>
+  <style name="Doxygen.Tag" foreground="#ffa2a2" italic="true"/>
   <style name="VisualWhitespace" foreground="#c0c0c0"/>
   <style name="QmlLocalId" foreground="#4271ae" italic="true"/>
   <style name="QmlExternalId" foreground="#f5871f" italic="true"/>
@@ -60,5 +60,6 @@
   <style name="Error" underlineColor="#ff0000" underlineStyle="SingleUnderline"/>
   <style name="ErrorContext" underlineColor="#ff0000" underlineStyle="DotLine"/>
   <style name="Declaration"/>
+  <style name="OutputArgument" foreground="#000000" background="#ffffff" italic="true"/>
   <style name="LastStyleSentinel" foreground="#8e908c"/>
 </style-scheme>
