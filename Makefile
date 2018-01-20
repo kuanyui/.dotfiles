@@ -24,10 +24,7 @@ quicklisp :
 	-ln -s "${current_dir}/.sbclrc" ~/
 
 emacs :
-	cd;git clone https://github.com/kuanyui/.emacs.d.git
-	mkdir ~/.emacs.d
-	mkdir ~/.emacs.d/git
-	mkdir ~/.emacs.d/private;cd !$;touch twittering-filter-users.el
+	cd;git clone --recursive https://github.com/kuanyui/.emacs.d.git
 
 suse-packages :
 	chmod +x suse/install-pkg.sh
