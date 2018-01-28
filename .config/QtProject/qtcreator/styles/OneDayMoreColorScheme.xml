@@ -29,8 +29,8 @@
   <style name="Preprocessor" foreground="#8959a8"/>
   <style name="Label" foreground="#4d4d4c" bold="true"/>
   <style name="Comment" foreground="#909090" italic="true"/>
-  <style name="Doxygen.Comment" foreground="#ff4b4b"/>
-  <style name="Doxygen.Tag" foreground="#ffa2a2" italic="true"/>
+  <style name="Doxygen.Comment" foreground="#d94343"/>
+  <style name="Doxygen.Tag" foreground="#f08550" italic="true"/>
   <style name="VisualWhitespace" foreground="#c0c0c0"/>
   <style name="QmlLocalId" foreground="#4271ae" italic="true"/>
   <style name="QmlExternalId" foreground="#f5871f" italic="true"/>
