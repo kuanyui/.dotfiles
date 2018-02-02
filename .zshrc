@@ -420,5 +420,5 @@ export LSCOLORS="ExfxcxdxCxegedabagacEd"
 # alias set-company-git-ssh='export GIT_SSH_COMMAND="ssh -i ~/.ssh/intrising";
 #                            export PS1="${PS1}$(tput setaf 6)(git-ssh-key: intrising)$(tput setaf 7) "'
 #
-alias set-company-git-ssh='export GIT_SSH_COMMAND="ssh -i ~/.ssh/intrising";
+alias set-git-ssh-company='export GIT_SSH_COMMAND="ssh -i ~/.ssh/intrising";
                            export PS1="${PS1} company ==> "'
