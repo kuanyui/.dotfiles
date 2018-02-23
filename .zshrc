@@ -75,7 +75,7 @@ EDITOR='emacs'
    (( count = $count + 1 ))
     done
     PR_NO_COLOR="%{$terminfo[sgr0]%}"
-PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR]%(!.#.$) "
+PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%4c$PR_NO_COLOR]%(!.#.$) "
 RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
 #LANGUAGE="zh_TW:zh:en"
 #LANG='zh_TW.utf8'
@@ -107,6 +107,7 @@ alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/py
 #if [[ $HOSTNAME == "kamna" ]] {
 #	alias emacs='emacs -l ~/.emacs.kamna'
 #}
+alias rm-node-modules='rm -r node_modules yarn.lock; echo "[DONE] node_modules AND yarn.lock were deleted."'
 
 # alias	=clear
 
@@ -217,6 +218,7 @@ function command_not_found_handle() {
 
 alias emacs='emacs -nw'
 alias ko='kde-open'
+alias xo='xdg-open'
 alias ta='if tmux attach-session -t 0;then;else tmux;fi'
 alias lo='logout'
 alias sudosynaptic='kdesudo -u root synaptic'
@@ -331,6 +333,7 @@ export NVM_DIR="$HOME/.nvm"
 
 alias sz="source ~/.zshrc"
 
+alias n8='nvm use v8.9.3'
 core1-server() {
     if [ -z $1 ]
     then echo "[Usage]"
