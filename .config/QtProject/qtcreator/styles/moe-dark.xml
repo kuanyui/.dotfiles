@@ -19,7 +19,7 @@
   <style name="Type" foreground="#00d7af"/>
   <style name="Local" foreground="#ff8700"/>
   <style name="Global" bold="true"/>
-  <style name="Field" foreground="#ffa73c" underlineColor="#ef8e1f"/>
+  <style name="Field" foreground="#b06fff" underlineColor="#ef8e1f"/>
   <style name="Static" foreground="#f5871f" bold="true"/>
   <style name="VirtualMethod" foreground="#ffd700" italic="true"/>
   <style name="Function" foreground="#ffd700"/>
@@ -27,7 +27,7 @@
   <style name="PrimitiveType" foreground="#5fafd7"/>
   <style name="Operator" foreground="#d7ff00"/>
   <style name="Preprocessor" foreground="#d18aff"/>
-  <style name="Label" foreground="#4d4d4c" bold="true"/>
+  <style name="Label" foreground="#ffffff" bold="true"/>
   <style name="Comment" foreground="#6c6c6c" italic="true"/>
   <style name="Doxygen.Comment" foreground="#ef2929"/>
   <style name="Doxygen.Tag" foreground="#5fafd7" italic="true"/>
