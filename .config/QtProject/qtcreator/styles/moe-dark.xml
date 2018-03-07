@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme version="1.0" name="moe-dark">
+  <style name="Text" foreground="#c6c6c6" background="#303030"/>
+  <style name="Link" foreground="#5fafd7"/>
+  <style name="Selection" foreground="#303030" background="#d7ff87"/>
+  <style name="LineNumber" foreground="#eeebc2" background="#514f42"/>
+  <style name="SearchResult" foreground="#ffffff" background="#ff1f8b"/>
+  <style name="SearchScope" foreground="#4d4d4c"/>
+  <style name="Parentheses" foreground="#4d4d4c" background="#d6d6d6"/>
+  <style name="ParenthesesMismatch" foreground="#ffffff" background="#a40000"/>
+  <style name="AutoComplete" foreground="#000080" background="#c0c0ff"/>
+  <style name="CurrentLine" background="#3a3a3a"/>
+  <style name="CurrentLineNumber" foreground="#423e16" background="#e4e0bc" bold="true"/>
+  <style name="Occurrences" foreground="#ffffff" background="#d0671f"/>
+  <style name="Occurrences.Unused" foreground="#ffeac6" background="#f97800"/>
+  <style name="Occurrences.Rename" foreground="#4d4d4c" background="#ffd3a6"/>
+  <style name="Number" foreground="#539af5"/>
+  <style name="String" foreground="#ff4ea3"/>
+  <style name="Type" foreground="#00d7af"/>
+  <style name="Local" foreground="#ff8700"/>
+  <style name="Global" bold="true"/>
+  <style name="Field" foreground="#ffa73c" underlineColor="#ef8e1f"/>
+  <style name="Static" foreground="#f5871f" bold="true"/>
+  <style name="VirtualMethod" foreground="#ffd700" italic="true"/>
+  <style name="Function" foreground="#ffd700"/>
+  <style name="Keyword" foreground="#a1db00" bold="true"/>
+  <style name="PrimitiveType" foreground="#5fafd7"/>
+  <style name="Operator" foreground="#d7ff00"/>
+  <style name="Preprocessor" foreground="#d18aff"/>
+  <style name="Label" foreground="#4d4d4c" bold="true"/>
+  <style name="Comment" foreground="#6c6c6c" italic="true"/>
+  <style name="Doxygen.Comment" foreground="#ef2929"/>
+  <style name="Doxygen.Tag" foreground="#5fafd7" italic="true"/>
+  <style name="VisualWhitespace" foreground="#5f0000"/>
+  <style name="QmlLocalId" foreground="#4271ae" italic="true"/>
+  <style name="QmlExternalId" foreground="#f5871f" italic="true"/>
+  <style name="QmlTypeId" foreground="#4271ae"/>
+  <style name="QmlRootObjectProperty" foreground="#4271ae" italic="true"/>
+  <style name="QmlScopeObjectProperty" foreground="#4271ae" italic="true"/>
+  <style name="QmlExternalObjectProperty" foreground="#f5871f" italic="true"/>
+  <style name="JsScopeVar" foreground="#4d4d4c" italic="true"/>
+  <style name="JsImportVar" foreground="#4d4d4c" italic="true"/>
+  <style name="JsGlobalVar" foreground="#4d4d4c" italic="true"/>
+  <style name="QmlStateName" foreground="#4271ae"/>
+  <style name="Binding" foreground="#4d4d4c" bold="true"/>
+  <style name="DisabledCode" foreground="#a9a9a9"/>
+  <style name="AddedLine" foreground="#4d4d4c" background="#add8e6"/>
+  <style name="RemovedLine" foreground="#0000ff" background="#e0ffff" bold="true"/>
+  <style name="DiffFile" foreground="#4d4d4c" background="#ff0000" bold="true"/>
+  <style name="DiffLocation" foreground="#4d4d4c" background="#ff0000" bold="true"/>
+  <style name="DiffFileLine" foreground="#8e908c"/>
+  <style name="DiffContextLine" foreground="#8e908c"/>
+  <style name="DiffSourceLine" foreground="#4d4d4c" background="#ffbbff"/>
+  <style name="DiffSourceChar" foreground="#0000ff" background="#e0ffff" bold="true"/>
+  <style name="DiffDestLine" foreground="#4d4d4c" background="#ffbbff"/>
+  <style name="DiffDestChar" foreground="#4d4d4c" background="#add8e6"/>
+  <style name="LogChangeLine" foreground="#c00000"/>
+  <style name="Warning" underlineColor="#ffbe00" underlineStyle="SingleUnderline"/>
+  <style name="WarningContext" underlineColor="#ffbe00" underlineStyle="DotLine"/>
+  <style name="Error" underlineColor="#dd0000" underlineStyle="SingleUnderline"/>
+  <style name="ErrorContext" underlineColor="#dd0000" underlineStyle="DotLine"/>
+  <style name="Declaration"/>
+  <style name="OutputArgument" foreground="#000000" background="#ffffff" italic="true"/>
+  <style name="LastStyleSentinel" foreground="#8e908c"/>
+</style-scheme>

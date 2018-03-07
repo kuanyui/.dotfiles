@@ -107,7 +107,7 @@ alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/py
 #if [[ $HOSTNAME == "kamna" ]] {
 #	alias emacs='emacs -l ~/.emacs.kamna'
 #}
-alias rm-node-modules='rm -r node_modules yarn.lock; echo "[DONE] node_modules AND yarn.lock were deleted."'
+alias rm-node-modules='rm -r node_modules package-lock.json yarn.lock; echo "[DONE] node_modules AND yarn.lock were deleted."'
 
 # alias	=clear
 
