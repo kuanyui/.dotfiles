@@ -23,14 +23,14 @@
   <style name="Static" foreground="#ff8700" bold="true"/>
   <style name="VirtualMethod" foreground="#b5ff07" italic="true"/>
   <style name="Function" foreground="#b5ff07"/>
-  <style name="Keyword" foreground="#ff007f" bold="true"/>
+  <style name="Keyword" foreground="#ff3988" bold="true"/>
   <style name="PrimitiveType" foreground="#5fafd7"/>
   <style name="Operator" foreground="#ffffff"/>
   <style name="Preprocessor" foreground="#ffd323"/>
   <style name="Label" foreground="#ffffff" bold="true" italic="true"/>
   <style name="Comment" foreground="#6c6c6c" italic="true"/>
-  <style name="Doxygen.Comment" foreground="#ffd323"/>
-  <style name="Doxygen.Tag" foreground="#5fafd7" italic="true"/>
+  <style name="Doxygen.Comment" foreground="#ff5457" italic="true"/>
+  <style name="Doxygen.Tag" foreground="#d7dcdb" italic="true"/>
   <style name="VisualWhitespace" foreground="#ffffff" background="#262626"/>
   <style name="QmlLocalId" foreground="#4271ae" italic="true"/>
   <style name="QmlExternalId" foreground="#f5871f" italic="true"/>
