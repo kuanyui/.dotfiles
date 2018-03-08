@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<style-scheme version="1.0" name="moe-dark">
+<style-scheme version="1.0" name="moe-dark-alternative">
   <style name="Text" foreground="#c6c6c6" background="#1c1c1c"/>
   <style name="Link" foreground="#5fafd7"/>
   <style name="Selection" foreground="#303030" background="#d7ff87"/>
@@ -15,23 +15,23 @@
   <style name="Occurrences.Unused" foreground="#ffeac6" background="#f97800"/>
   <style name="Occurrences.Rename" foreground="#4d4d4c" background="#ffd3a6"/>
   <style name="Number" foreground="#ffd700"/>
-  <style name="String" foreground="#5fafd7"/>
-  <style name="Type" foreground="#00d7af"/>
+  <style name="String" foreground="#00d7af"/>
+  <style name="Type" foreground="#5fafd7"/>
   <style name="Local" foreground="#ff8700"/>
   <style name="Global" bold="true"/>
   <style name="Field" foreground="#ca73ff" underlineColor="#ef8e1f"/>
-  <style name="Static" foreground="#ffd700" bold="true"/>
-  <style name="VirtualMethod" foreground="#ff6767" italic="true"/>
-  <style name="Function" foreground="#ff6767"/>
-  <style name="Keyword" foreground="#a1db00" bold="true"/>
-  <style name="PrimitiveType" foreground="#00d7af"/>
+  <style name="Static" foreground="#ff8700" bold="true"/>
+  <style name="VirtualMethod" foreground="#b5ff07" italic="true"/>
+  <style name="Function" foreground="#b5ff07"/>
+  <style name="Keyword" foreground="#ff007f" bold="true"/>
+  <style name="PrimitiveType" foreground="#5fafd7"/>
   <style name="Operator" foreground="#ffffff"/>
-  <style name="Preprocessor" foreground="#d18aff"/>
-  <style name="Label" foreground="#ffffff" bold="true"/>
+  <style name="Preprocessor" foreground="#ffd323"/>
+  <style name="Label" foreground="#ffffff" bold="true" italic="true"/>
   <style name="Comment" foreground="#6c6c6c" italic="true"/>
-  <style name="Doxygen.Comment" foreground="#ef3831"/>
+  <style name="Doxygen.Comment" foreground="#ffd323"/>
   <style name="Doxygen.Tag" foreground="#5fafd7" italic="true"/>
-  <style name="VisualWhitespace" foreground="#5f0000"/>
+  <style name="VisualWhitespace" foreground="#ffffff" background="#262626"/>
   <style name="QmlLocalId" foreground="#4271ae" italic="true"/>
   <style name="QmlExternalId" foreground="#f5871f" italic="true"/>
   <style name="QmlTypeId" foreground="#4271ae"/>
