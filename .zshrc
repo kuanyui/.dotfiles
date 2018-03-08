@@ -333,7 +333,12 @@ export NVM_DIR="$HOME/.nvm"
 
 alias sz="source ~/.zshrc"
 
-alias n8='nvm use v8.9.3'
+alias n6='nvm use v6.9.1'
+alias n7='nvm use v7.9.0'
+alias n8='nvm use v8.2.1'
+alias nvv='nvm ls'
+alias nv='nvm version'
+
 core1-server() {
     if [ -z $1 ]
     then echo "[Usage]"
@@ -423,5 +428,24 @@ export LSCOLORS="ExfxcxdxCxegedabagacEd"
 # alias set-company-git-ssh='export GIT_SSH_COMMAND="ssh -i ~/.ssh/intrising";
 #                            export PS1="${PS1}$(tput setaf 6)(git-ssh-key: intrising)$(tput setaf 7) "'
 #
-alias set-git-ssh-company='export GIT_SSH_COMMAND="ssh -i ~/.ssh/intrising";
-                           export PS1="${PS1} company ==> "'
+function cpn () {
+    export GIT_SSH_COMMAND="ssh -i ~/.ssh/intrising"
+    export PS1="${PS1} cpn ==> "
+    if [[ ! $PWD = *"Intrising"* ]]; then
+        cd ~/Intrising/
+    fi
+}
+
+function cpn-viewer () {
+    local session_name=$(tmux display-message -p "#{session_name}")
+    local dirs=("ui" "ui/app" "agent" "ui-for-build")
+    for dir in "${dirs[@]}"; do
+        tmux new-window -t "${session_name}:"
+        local wi=`tmux display-message -p "#{window_index}"`
+        tmux rename-window -t "$wi" "$dir"
+        tmux send-keys     -t "$wi" " cd ~/Intrising/viewer/${dir}" C-m
+        tmux send-keys     -t "$wi" " cpn" C-m
+    done
+}
+
+alias list-color='for i in {0..16}; do echo $(tput setaf $i) tput setaf $i; done'
