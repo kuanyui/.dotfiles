@@ -438,11 +438,15 @@ function cpn () {
 
 function cpn-viewer () {
     local session_name=$(tmux display-message -p "#{session_name}")
-    local dirs=("ui" "ui/app" "agent" "ui-for-build")
-    for dir in "${dirs[@]}"; do
+    local dirs=("ui" "ui"        "agent" "ui-for-build" "ui-for-build")
+    local tabs=("ui" "ui/server" "agent" "ui/BUILD"     "ui/RELEASE")
+    for ((i=1;i<=${#dirs[@]};i++)); do
+        local dir="${dirs[i]}"
+        local tab="${tabs[i]}"
+        echo $dir $tab
         tmux new-window -t "${session_name}:"
         local wi=`tmux display-message -p "#{window_index}"`
-        tmux rename-window -t "$wi" "$dir"
+        tmux rename-window -t "$wi" "$tab"
         tmux send-keys     -t "$wi" " cd ~/Intrising/viewer/${dir}" C-m
         tmux send-keys     -t "$wi" " cpn" C-m
     done
