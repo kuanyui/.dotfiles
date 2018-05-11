@@ -1,0 +1,48 @@
+#!/usr/bin/env node
+
+const YES_OPTIONS = [
+  'CREATE_SUBDIRS',
+  'CALL_GRAPH',
+  'CALLER_GRAPH',
+  'HAVE_DOT',
+
+  'RECURSIVE',
+  'INLINE_SOURCES',
+
+  'EXTRACT_ALL',
+  'EXTRACT_PRIVATE',
+  'EXTRACT_PACKAGE',
+  'EXTRACT_STATIC'
+]
+const readline = require('readline')
+const fs = require('fs')
+const path = require('path')
+
+let filePath = process.argv[2]
+if (!filePath) {
+  console.log('[USAGE] doxygen-modifier MyExistedDoxygen.conf')
+  process.exit()
+}
+if (!fs.existsSync(filePath)) {
+  filePath = path.join(process.cwd(), filePath)
+  if (!fs.existsSync(filePath)) {
+    console.warn('File not existed:', filePath)
+    process.exit()
+  }
+}
+
+fs.readFile(filePath, 'utf8', function (err,data) {
+  if (err) {
+    console.error(err);
+    process.exit()
+  }
+  for (let str of YES_OPTIONS) {
+    let patt = new RegExp(`(\n${str} *= *)NO`, 'gi')
+    console.log(patt)
+    data = data.replace(patt, '$1YES');
+    //console.log(data)
+  }
+  fs.writeFile(filePath, data, 'utf8', function (err) {
+    if (err) return console.log(err);
+  });
+})
