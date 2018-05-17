@@ -79,10 +79,15 @@ PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%4c$PR_NO_COLOR]%(!
 RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
 #LANGUAGE="zh_TW:zh:en"
 #LANG='zh_TW.utf8'
-LANGUAGE="ja_JP.utf8"
-LANG='ja_JP.utf8'
-LC_ALL="ja_JP.UTF-8"  ##這個不太清楚作用，總之註解掉不使用也是可以運作的。
-LC_CTYPE='ja_JP.UTF-8'##這個也是。
+# LANGUAGE="ja_JP.utf8"
+# LANG='ja_JP.utf8'
+# LC_ALL="ja_JP.UTF-8"  ##這個不太清楚作用，總之註解掉不使用也是可以運作的。
+# LC_CTYPE='ja_JP.UTF-8'##這個也是。
+
+LANGUAGE="en_US.utf8"
+LANG='en_US.utf8'
+LC_ALL="en_US.UTF-8"  ##這個不太清楚作用，總之註解掉不使用也是可以運作的。
+LC_CTYPE='en_US.UTF-8'##這個也是。
 
 if [ $SSH_TTY ]; then
   MUTT_EDITOR=vim
@@ -429,7 +434,7 @@ export LSCOLORS="ExfxcxdxCxegedabagacEd"
 #                            export PS1="${PS1}$(tput setaf 6)(git-ssh-key: intrising)$(tput setaf 7) "'
 #
 function cpn () {
-    export GIT_SSH_COMMAND="ssh -i ~/.ssh/intrising"
+    export GIT_SSH_COMMAND="ssh -o 'IdentitiesOnly=yes' -i ${HOME}/.ssh/intrising"
     export PS1="${PS1} cpn ==> "
     if [[ ! $PWD = *"Intrising"* ]]; then
         cd ~/Intrising/
@@ -453,3 +458,5 @@ function cpn-viewer () {
 }
 
 alias list-color='for i in {0..16}; do echo $(tput setaf $i) tput setaf $i; done'
+
+export PATH=$PATH:${HOME}/rpi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin   # add this line at the end of file
