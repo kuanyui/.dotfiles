@@ -5,13 +5,14 @@ CODECS_KDE_YMP = codecs-kde.ymp
 YAST2_ONE_KEY_INS = /usr/share/applications/yast2-metapackage-handler
 
 dotfiles :
-	ln -s "${current_dir}/.gitconfig" ~/
-	ln -s "${current_dir}/.hgrc" ~/
-	ln -s "${current_dir}/.tmux.conf" ~/
-	ln -s "${current_dir}/.zshrc" ~/
-	ln -s "${current_dir}/scripts" ~/.scripts
-	ln -s "${current_dir}/.pentadactyl/" ~/.pentadactyl
-	ln -s "${current_dir}/.pentadactylrc" ~/.pentadactylrc
+	-ln -s "${current_dir}/.gitconfig" ~/
+	-ln -s "${current_dir}/.hgrc" ~/
+	-ln -s "${current_dir}/.tmux.conf" ~/
+	-ln -s "${current_dir}/.zshrc" ~/
+	-ln -s "${current_dir}/scripts" ~/.scripts
+	-ln -s "${current_dir}/.pentadactyl/" ~/.pentadactyl
+	-ln -s "${current_dir}/.pentadactylrc" ~/.pentadactylrc
+	-ln -s "${current_dir}/.config/QtProject/qtcreator/styles/" ~/.config/QtProject/qtcreator/styles
 
 powerline-font :
 	git clone https://github.com/Lokaltog/powerline-fonts.git
