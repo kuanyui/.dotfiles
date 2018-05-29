@@ -337,7 +337,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias sz="source ~/.zshrc"
-
+alias n0='nvm use v0.8.26'
 alias n6='nvm use v6.9.1'
 alias n7='nvm use v7.9.0'
 alias n8='nvm use v8.2.1'
@@ -351,14 +351,14 @@ core1-server() {
          return -1
     fi
     nvm use v0.8.26;
-    cd ~/Intrising/swixweb/;
+    cd ~/Intrising/core1/ui;
     echo "root@$1" > dtargets.lst;
     cd lib;
     PORT=7999 HTTPSPORT=8443  node app.js
 }
 core1-watch() {
     nvm use v0.8.26;
-    cd ~/Intrising/swixweb/;
+    cd ~/Intrising/core1/ui;
     cake build;
     cake buildviews;
     cake watchviews;

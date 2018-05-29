@@ -18,7 +18,7 @@
   <style name="String" foreground="#00d7af"/>
   <style name="Type" foreground="#5fafd7"/>
   <style name="Local" foreground="#ff8700"/>
-  <style name="Global" bold="true"/>
+  <style name="Global" foreground="#74b542" bold="true"/>
   <style name="Field" foreground="#ca73ff" underlineColor="#ef8e1f"/>
   <style name="Static" foreground="#ff8700" bold="true"/>
   <style name="VirtualMethod" foreground="#b5ff07" italic="true"/>
@@ -60,6 +60,7 @@
   <style name="Error" underlineColor="#dd0000" underlineStyle="SingleUnderline"/>
   <style name="ErrorContext" underlineColor="#dd0000" underlineStyle="DotLine"/>
   <style name="Declaration"/>
+  <style name="FunctionDefinition"/>
   <style name="OutputArgument" foreground="#000000" background="#ffffff" italic="true"/>
   <style name="LastStyleSentinel" foreground="#8e908c"/>
 </style-scheme>
