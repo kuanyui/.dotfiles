@@ -1,0 +1,9 @@
+[Unit]
+Description=Make suspend works correctly in MacBook Pro 2015
+
+[Service]
+Type=oneshot
+ExecStart=sh -c 'echo XHC1 > /proc/acpi/wakeup'
+
+[Install]
+WantedBy=multi-user.target
