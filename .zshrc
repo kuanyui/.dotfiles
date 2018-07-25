@@ -275,9 +275,9 @@ alias rpmlargest="rpm -qa --queryformat '%10{SIZE}\t%{NAME}\n' | sort -k1,1n"
 alias jk='jkbiv'
 alias ff-addon-dev="cd ~/temp/addon-sdk-1.16/;source bin/activate;cd"
 alias youtube='youtube-dl --no-mtime'
-alias yt='youtube-dl --no-mtime'
-alias yt18='youtube-dl --no-mtime -f 18'
-alias yt22='youtube-dl --no-mtime -f 22'
+alias yt='youtube-dl --no-mtime --ignore-errors'
+alias yt18='youtube-dl --no-mtime --ignore-errors -f 18'
+alias yt22='youtube-dl --no-mtime --ignore-errors -f 22'
 
 
 newer (){ ls -dt "$@" | head -1 ;}
