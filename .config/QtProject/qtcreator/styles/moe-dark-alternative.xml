@@ -18,7 +18,7 @@
   <style name="String" foreground="#00d7af"/>
   <style name="Type" foreground="#5fafd7"/>
   <style name="Local" foreground="#ff8700"/>
-  <style name="Global" foreground="#74b542" bold="true"/>
+  <style name="Global" foreground="#79edf9" bold="true"/>
   <style name="Field" foreground="#ca73ff" underlineColor="#ef8e1f"/>
   <style name="Static" foreground="#ff8700" bold="true"/>
   <style name="VirtualMethod" foreground="#b5ff07" italic="true"/>
@@ -26,6 +26,7 @@
   <style name="Keyword" foreground="#ff3988" bold="true"/>
   <style name="PrimitiveType" foreground="#5fafd7"/>
   <style name="Operator" foreground="#ffffff"/>
+  <style name="Overloaded Operator"/>
   <style name="Preprocessor" foreground="#ffd323"/>
   <style name="Label" foreground="#ffffff" bold="true" italic="true"/>
   <style name="Comment" foreground="#6c6c6c" italic="true"/>
@@ -42,7 +43,7 @@
   <style name="JsImportVar" foreground="#4d4d4c" italic="true"/>
   <style name="JsGlobalVar" foreground="#4d4d4c" italic="true"/>
   <style name="QmlStateName" foreground="#4271ae"/>
-  <style name="Binding" foreground="#4d4d4c" bold="true"/>
+  <style name="Binding" foreground="#adac8f" bold="true"/>
   <style name="DisabledCode" foreground="#a9a9a9"/>
   <style name="AddedLine" foreground="#4d4d4c" background="#add8e6"/>
   <style name="RemovedLine" foreground="#0000ff" background="#e0ffff" bold="true"/>
