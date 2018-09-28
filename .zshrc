@@ -342,6 +342,7 @@ alias n6='nvm use v6.9.1'
 alias n7='nvm use v7.9.0'
 alias n821='nvm use v8.2.1'
 alias n8='nvm use v8.9.3'
+alias n9='nvm use v9.9.0'
 alias nvv='nvm ls'
 alias nv='nvm version'
 
@@ -462,3 +463,4 @@ function cpn-viewer () {
 alias list-color='for i in {0..16}; do echo $(tput setaf $i) tput setaf $i; done'
 
 export PATH=$PATH:${HOME}/rpi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin   # add this line at the end of file
+export PATH="${PATH}:${HOME}/.vscode/VSCode-linux-x64/"
