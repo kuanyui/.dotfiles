@@ -13,7 +13,7 @@
     "bracketPairColorizer.forceUniqueOpeningColor": true,
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "highlight.regexes": {
-        "((//)? ?TODO:?)(.*)": [
+        "(/?/? ?TODO:?)(.*)": [
           {
             "overviewRulerColor": "#ffcc00",
             "backgroundColor": "#ffcc00",
@@ -25,7 +25,7 @@
             "color": "#1f1f1f"
           }
         ],
-        "( ?FIXME:?)(.*)": [
+        "(/?/? ?FIXME:?)(.*)": [
           {
             "overviewRulerColor": "#ff0000",
             "backgroundColor": "#ff0000",
@@ -37,7 +37,7 @@
             "color": "#1f1f1f"
           }
         ],
-        "( ?DEPRECATED:?)(.*)": [
+        "(/?/? ?DEPRECATED:?)(.*)": [
           {
             "overviewRulerColor": "#ff6600",
             "backgroundColor": "#ff6600",
@@ -57,16 +57,6 @@
         ]
       },
       "search.collapseResults": "alwaysExpand",
-      "autoAlign.enabled": {
-        "csv": true,
-        "bsv": true,
-        "vue": false
-      },
-      "autoAlign.associations": {
-        "csv": ",",
-        "bsv": "|",
-        "vue": ","
-      },
       "search.smartCase": true,
       "colorHelper.disableGpu": 1,
       "workbench.iconTheme": "material-icon-theme",
