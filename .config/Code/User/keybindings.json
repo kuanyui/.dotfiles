@@ -6,17 +6,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+c alt+p",
-        "command": "editor.action.rename",
-        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "f2",
-        "command": "-editor.action.rename",
-        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "f2",
+        "key": "shift+f2",
         "command": "editor.action.goToDeclaration",
         "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
@@ -26,25 +16,8 @@
         "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
-        "key": "ctrl+alt+-",
-        "command": "-workbench.action.quickInputBack",
-        "when": "inQuickOpen"
-    },
-    {
         "key": "shift+alt+0",
         "command": "workbench.action.navigateForward"
-    },
-    {
-        "key": "ctrl+shift+-",
-        "command": "-workbench.action.navigateForward"
-    },
-    {
-        "key": "shift+alt+0",
-        "command": "-workbench.action.toggleEditorGroupLayout"
-    },
-    {
-        "key": "shift+alt+9",
-        "command": "-workbench.action.moveEditorToLastGroup"
     },
     {
         "key": "shift+alt+9",
@@ -73,10 +46,6 @@
         "command": "editor.action.addSelectionToPreviousFindMatch"
     },
     {
-        "key": "ctrl+x s",
-        "command": "workbench.action.files.saveAll"
-    },
-    {
         "key": "ctrl+p",
         "command": "-emacs.cursorUp",
         "when": "editorTextFocus && !suggestWidgetVisible"
@@ -87,7 +56,7 @@
         "when": "editorFocus && quickFixWidgetVisible"
     },
     {
-        "key": "ctrl+c ctrl+l",
+        "key": "ctrl+shift+d",
         "command": "editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
@@ -111,62 +80,8 @@
         "command": "-workbench.action.togglePanel"
     },
     {
-        "key": "ctrl+j",
-        "command": "-editor.action.insertLineAfter",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+v",
-        "command": "-emacs.cursorPageDown",
-        "when": "editorTextFocus && !suggestWidgetVisible"
-    },
-    {
         "key": "ctrl+alt+\\",
         "command": "editor.action.reindentselectedlines"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "-emacs.cursorRight",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "-emacs.cursorRight",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+b",
-        "command": "-emacs.cursorLeft",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "-emacs.cursorUp",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "-emacs.cursorDown",
-        "when": "editorTextFocus && !suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "-selectNextQuickFix",
-        "when": "editorFocus && quickFixWidgetVisible"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "-selectNextSuggestion",
-        "when": "editorTextFocus && suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "-showNextParameterHint",
-        "when": "editorTextFocus && parameterHintsVisible"
-    },
-    {
-        "key": "ctrl+shift+pagedown",
-        "command": "-workbench.action.moveEditorRightInGroup"
     },
     {
         "key": "ctrl+shift+alt+d",
@@ -267,12 +182,4 @@
         "key": "alt+p",
         "command": "editor.action.moveSelectionToPreviousFindMatch"
     },
-    {
-        "key": "ctrl+c ctrl+h",
-        "command": "highlightwords.addHighlight"
-    },
-    {
-        "key": "ctrl+c ctrl+shift+h",
-        "command": "highlightwords.removeHighlight"
-    }
 ]
