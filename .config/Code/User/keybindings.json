@@ -182,4 +182,32 @@
         "key": "alt+p",
         "command": "editor.action.moveSelectionToPreviousFindMatch"
     },
+    {
+        "key": "ctrl+alt+b",
+        "command": "cursorWordLeft"
+    },
+    {
+        "key": "alt+d",
+        "command": "deleteWordEndRight"
+    },
+    {
+        "key": "alt+f",
+        "command": "cursorWordPartRight"
+    },
+    {
+        "key": "ctrl+alt+f",
+        "command": "cursorWordRight"
+    },
+    {
+        "key": "alt+b",
+        "command": "cursorWordPartLeft"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "cursorLineEnd"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "cursorLineStart"
+    }
 ]
