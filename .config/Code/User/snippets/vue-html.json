@@ -1,0 +1,9 @@
+{
+	"$t": {
+		"prefix": "$T",
+		"body": [
+			"$t('')"
+		],
+		"description": "VueI18n"
+	}
+}

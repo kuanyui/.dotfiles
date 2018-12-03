@@ -1,0 +1,91 @@
+{
+    "editor.fontSize": 12,
+    "editor.fontFamily": " 'monospace', 'DejaVu Sans Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "One Monokai",
+    "breadcrumbs.enabled": true,
+    "editor.renderWhitespace": "none",
+    "terminal.integrated.fontSize": 10,
+    "terminal.integrated.fontFamily": "monospace",
+    "window.zoomLevel": -1,
+    "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+    "typescript.locale": "en",
+    "bracketPairColorizer.forceUniqueOpeningColor": true,
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+    "highlight.regexes": {
+        "((//)? ?TODO:?)(.*)": [
+          {
+            "overviewRulerColor": "#ffcc00",
+            "backgroundColor": "#ffcc00",
+            "color": "#1f1f1f",
+            "fontWeight": "bold"
+          },
+          {
+            "backgroundColor": "#d9ad00",
+            "color": "#1f1f1f"
+          }
+        ],
+        "( ?FIXME:?)(.*)": [
+          {
+            "overviewRulerColor": "#ff0000",
+            "backgroundColor": "#ff0000",
+            "color": "#1f1f1f",
+            "fontWeight": "bold"
+          },
+          {
+            "backgroundColor": "#d90000",
+            "color": "#1f1f1f"
+          }
+        ],
+        "( ?DEPRECATED:?)(.*)": [
+          {
+            "overviewRulerColor": "#ff6600",
+            "backgroundColor": "#ff6600",
+            "color": "#1f1f1f",
+            "fontWeight": "bold"
+          },
+          {
+            "backgroundColor": "#d95500",
+            "color": "#1f1f1f"
+          }
+        ],
+        "(// )(@\\w+)": [
+          {},
+          {
+            "color": "#4de0ff"
+          }
+        ]
+      },
+      "search.collapseResults": "alwaysExpand",
+      "autoAlign.enabled": {
+        "csv": true,
+        "bsv": true,
+        "vue": false
+      },
+      "autoAlign.associations": {
+        "csv": ",",
+        "bsv": "|",
+        "vue": ","
+      },
+      "search.smartCase": true,
+      "colorHelper.disableGpu": 1,
+      "workbench.iconTheme": "material-icon-theme",
+      "todo.embedded.providers.ag.regex": "(?:#|//|/\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|DEPRECATED)",
+      "todo.embedded.providers.rg.regex": "(?:#|//|/\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|DEPRECATED)",
+      "todo.embedded.regex": "(?:<!-- *)?(?:#|//|/\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(TODO|FIXME|FIX|BUG|DEPRECATED|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))",
+      "todo.colors.types": {
+        "TODO": "#ffcc00",
+        "FIXME": "#cc0000",
+        "FIX": "#cc0000",
+        "BUG": "#cc0000",
+        "UGLY": "#cc0000",
+        "DEBUG": "#cc0000",
+        "HACK": "#cc0000",
+        "DEPRECATED": "#ff6600",
+        "REVIEW": "#00ccff",
+        "OPTIMIZE": "#00ccff",
+        "TSC": "#00ccff",
+        "NOTE": "#cc00cc",
+        "IDEA": "#cc00cc",
+      }
+    }

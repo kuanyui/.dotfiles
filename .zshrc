@@ -464,3 +464,5 @@ alias list-color='for i in {0..16}; do echo $(tput setaf $i) tput setaf $i; done
 
 export PATH=$PATH:${HOME}/rpi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin   # add this line at the end of file
 export PATH="${PATH}:${HOME}/.vscode/VSCode-linux-x64/"
+
+alias emacsx="'emacs' -x > /dev/null 2>&1 &"
