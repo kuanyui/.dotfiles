@@ -5,5 +5,12 @@
 			"$t('')"
 		],
 		"description": "VueI18n"
+	},
+	"i18n": {
+		"prefix": "ttt",
+		"body": [
+			"$t('')"
+		],
+		"description": "whatever"
 	}
 }

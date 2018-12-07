@@ -77,5 +77,9 @@
         "TSC": "#00ccff",
         "NOTE": "#cc00cc",
         "IDEA": "#cc00cc",
-      }
+      },
+      "emmet.showSuggestionsAsSnippets": true,
+      "workbench.editor.tabSizing": "shrink",
+      "workbench.editor.enablePreview": false,
+      "gitlens.codeLens.enabled": false
     }
