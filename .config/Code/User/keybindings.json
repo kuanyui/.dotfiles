@@ -187,10 +187,6 @@
         "command": "cursorWordLeft"
     },
     {
-        "key": "alt+d",
-        "command": "deleteWordEndRight"
-    },
-    {
         "key": "alt+f",
         "command": "cursorWordPartRight"
     },
@@ -235,5 +231,42 @@
     {
         "key": "ctrl+shift+w",
         "command": "-workbench.action.closeWindow"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "-deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+d",
+        "command": "deleteWordPartRight"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "deleteWordPartLeft"
+    },
+    {
+        "key": "ctrl+shift+alt+s",
+        "command": "workbench.action.files.saveAll"
+    },
+    {
+        "key": "ctrl+shift+,",
+        "command": "workbench.action.openGlobalKeybindings"
+    },
+    {
+        "key": "ctrl+k ctrl+s",
+        "command": "-workbench.action.openGlobalKeybindings"
+    },
+    {
+        "key": "ctrl+shift+alt+,",
+        "command": "workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+shift+alt+k",
+        "command": "workbench.action.closeOtherEditors"
     }
 ]

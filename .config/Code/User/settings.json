@@ -2,6 +2,11 @@
     "editor.fontSize": 12,
     "editor.fontFamily": " 'monospace', 'DejaVu Sans Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.minimap.enabled": false,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
     "workbench.colorTheme": "One Monokai",
     "breadcrumbs.enabled": true,
     "editor.renderWhitespace": "none",
@@ -81,5 +86,7 @@
       "emmet.showSuggestionsAsSnippets": true,
       "workbench.editor.tabSizing": "shrink",
       "workbench.editor.enablePreview": false,
-      "gitlens.codeLens.enabled": false
+      "gitlens.codeLens.enabled": false,
+      "workbench.editor.tabCloseButton": "off",
+      "cSpell.diagnosticLevel": "Hint"
     }

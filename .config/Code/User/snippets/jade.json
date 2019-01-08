@@ -1,0 +1,16 @@
+{
+	"i18n": {
+		"prefix": "tit",
+		"body": [
+			"\\$t('$0')"
+		],
+		"description": "$t('')"
+	},
+	"bracketed_i18n": {
+		"prefix": "ttit",
+		"body": [
+			"{{ \\$t('$0') }}"
+		],
+		"description": "{{ $t('') }}"
+	}
+}
