@@ -5,7 +5,7 @@
   <style name="Selection" foreground="#303030" background="#d7ff87"/>
   <style name="LineNumber" foreground="#eeedd0" background="#5b5952"/>
   <style name="SearchResult" foreground="#ffffff" background="#ff1f8b"/>
-  <style name="SearchScope" foreground="#4d4d4c"/>
+  <style name="SearchScope" foreground="#4d4d4c" background="#34322b"/>
   <style name="Parentheses" foreground="#4d4d4c" background="#d6d6d6"/>
   <style name="ParenthesesMismatch" foreground="#ffffff" background="#a40000"/>
   <style name="AutoComplete" foreground="#000080" background="#c0c0ff"/>
@@ -39,9 +39,9 @@
   <style name="QmlRootObjectProperty" foreground="#4271ae" italic="true"/>
   <style name="QmlScopeObjectProperty" foreground="#4271ae" italic="true"/>
   <style name="QmlExternalObjectProperty" foreground="#f5871f" italic="true"/>
-  <style name="JsScopeVar" foreground="#4d4d4c" italic="true"/>
-  <style name="JsImportVar" foreground="#4d4d4c" italic="true"/>
-  <style name="JsGlobalVar" foreground="#4d4d4c" italic="true"/>
+  <style name="JsScopeVar" foreground="#a7a7a7" italic="true"/>
+  <style name="JsImportVar" foreground="#b76ae3" italic="true"/>
+  <style name="JsGlobalVar" foreground="#eab539" italic="true"/>
   <style name="QmlStateName" foreground="#4271ae"/>
   <style name="Binding" foreground="#adac8f" bold="true"/>
   <style name="DisabledCode" foreground="#a9a9a9"/>
