@@ -466,3 +466,15 @@ export PATH=$PATH:${HOME}/rpi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-r
 export PATH="${PATH}:${HOME}/.vscode/VSCode-linux-x64/"
 
 alias emacsx="'emacs' -x > /dev/null 2>&1 &"
+
+function c2debug () {
+    if [ -e $1 ]; then
+        echo "Example: c2debug 16.250";
+    else
+        ssh -o 'IdentitiesOnly=yes' -i ~/.ssh/intrising "root@192.168.${$1}" 'bash -s' <<EOF
+touch /etc/debug
+sync
+reboot
+EOF
+    fi
+}
