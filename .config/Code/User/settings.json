@@ -88,5 +88,7 @@
       "workbench.editor.enablePreview": false,
       "gitlens.codeLens.enabled": false,
       "workbench.editor.tabCloseButton": "off",
-      "cSpell.diagnosticLevel": "Hint"
+      "cSpell.diagnosticLevel": "Hint",
+      "color-highlight.markRuler": false,
+      "puglint.enable": true
     }

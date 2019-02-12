@@ -84,27 +84,23 @@
         "command": "editor.action.reindentselectedlines"
     },
     {
-        "key": "ctrl+shift+alt+d",
-        "command": "workbench.action.moveActiveEditorGroupRight"
-    },
-    {
         "key": "ctrl+k right",
         "command": "-workbench.action.moveActiveEditorGroupRight"
     },
     {
-        "key": "shift+alt+x",
+        "key": "ctrl+shift+alt+x",
         "command": "workbench.action.moveEditorToBelowGroup"
     },
     {
-        "key": "shift+alt+c",
+        "key": "ctrl+shift+alt+c",
         "command": "workbench.action.moveEditorToRightGroup"
     },
     {
-        "key": "shift+alt+z",
+        "key": "ctrl+shift+alt+z",
         "command": "workbench.action.moveEditorToLeftGroup"
     },
     {
-        "key": "shift+alt+w",
+        "key": "shift+alt+s",
         "command": "workbench.action.focusAboveGroup"
     },
     {
@@ -112,7 +108,7 @@
         "command": "-workbench.action.focusAboveGroup"
     },
     {
-        "key": "shift+alt+a",
+        "key": "shift+alt+z",
         "command": "workbench.action.focusLeftGroup"
     },
     {
@@ -120,7 +116,7 @@
         "command": "-workbench.action.focusLeftGroup"
     },
     {
-        "key": "shift+alt+s",
+        "key": "shift+alt+x",
         "command": "workbench.action.focusBelowGroup"
     },
     {
@@ -128,7 +124,7 @@
         "command": "-workbench.action.focusBelowGroup"
     },
     {
-        "key": "shift+alt+d",
+        "key": "shift+alt+c",
         "command": "workbench.action.focusRightGroup"
     },
     {
@@ -140,24 +136,12 @@
         "command": "-workbench.action.focusFirstEditorGroup"
     },
     {
-        "key": "ctrl+shift+alt+w",
-        "command": "workbench.action.moveActiveEditorGroupUp"
-    },
-    {
         "key": "ctrl+k up",
         "command": "-workbench.action.moveActiveEditorGroupUp"
     },
     {
-        "key": "ctrl+shift+alt+x",
-        "command": "workbench.action.moveActiveEditorGroupDown"
-    },
-    {
         "key": "ctrl+k down",
         "command": "-workbench.action.moveActiveEditorGroupDown"
-    },
-    {
-        "key": "ctrl+shift+alt+a",
-        "command": "workbench.action.moveActiveEditorGroupLeft"
     },
     {
         "key": "ctrl+k left",
@@ -268,5 +252,17 @@
     {
         "key": "ctrl+shift+alt+k",
         "command": "workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "alt+u",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "ctrl+shift+alt+s",
+        "command": "workbench.action.moveEditorToAboveGroup"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
     }
 ]
