@@ -250,7 +250,7 @@
         "command": "-workbench.action.openSettings"
     },
     {
-        "key": "ctrl+shift+alt+k",
+        "key": "ctrl+shift+alt+q",
         "command": "workbench.action.closeOtherEditors"
     },
     {
@@ -264,5 +264,9 @@
     {
         "key": "ctrl+alt+left",
         "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.closeActiveEditor"
     }
 ]
