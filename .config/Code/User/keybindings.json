@@ -100,7 +100,7 @@
         "command": "workbench.action.moveEditorToLeftGroup"
     },
     {
-        "key": "shift+alt+s",
+        "key": "shift+alt+d",
         "command": "workbench.action.focusAboveGroup"
     },
     {
@@ -258,7 +258,7 @@
         "command": "editor.action.transformToUppercase"
     },
     {
-        "key": "ctrl+shift+alt+s",
+        "key": "ctrl+shift+alt+d",
         "command": "workbench.action.moveEditorToAboveGroup"
     },
     {
@@ -268,5 +268,15 @@
     {
         "key": "ctrl+shift+q",
         "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+shift+alt+a",
+        "command": "editor.action.selectAll",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-editor.action.selectAll",
+        "when": "textInputFocus"
     }
 ]

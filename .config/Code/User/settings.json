@@ -90,5 +90,8 @@
       "workbench.editor.tabCloseButton": "off",
       "cSpell.diagnosticLevel": "Hint",
       "color-highlight.markRuler": false,
-      "puglint.enable": true
+      "puglint.enable": true,
+      "highlightwords.defaultMode": {
+        "default": 1
+      }  
     }
