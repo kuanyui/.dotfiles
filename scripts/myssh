@@ -1,0 +1,5 @@
+#!/bin/sh
+# This script is to startup ssh-agent for KDE plasma
+export SSH_ASKPASS="/usr/bin/ksshaskpass"
+eval $(ssh-agent)
+ssh-add
