@@ -1,15 +1,15 @@
 {
 	"$T": {
-		"prefix": "$T",
+		"prefix": "tit",
 		"body": [
 			"$t('')"
 		],
 		"description": "VueI18n"
 	},
 	"i18n": {
-		"prefix": "ttt",
+		"prefix": "ttit",
 		"body": [
-			"$t('')"
+			"{{ $t('') }}"
 		],
 		"description": "whatever"
 	}

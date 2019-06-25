@@ -278,5 +278,14 @@
         "key": "ctrl+a",
         "command": "-editor.action.selectAll",
         "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "deleteAllLeft"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
     }
 ]

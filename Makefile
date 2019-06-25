@@ -15,6 +15,7 @@ dotfiles :
 	-ln -s "${current_dir}/.config/QtProject/qtcreator/styles/" ~/.config/QtProject/qtcreator/styles
 	-ln -s "${current_dir}/.config/mpv/mpv.conf" ~/.config/mpv/mpv.conf
 	-ln -s "${current_dir}/.config/mpv/input.conf" ~/.config/mpv/input.conf
+	-ln -s "${current_dir}/.local/share/konsole" ~/.local/share/konsole
 
 powerline-font :
 	git clone https://github.com/Lokaltog/powerline-fonts.git

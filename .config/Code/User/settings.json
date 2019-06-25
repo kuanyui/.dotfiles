@@ -9,7 +9,7 @@
     },
     "workbench.colorTheme": "One Monokai",
     "breadcrumbs.enabled": true,
-    "editor.renderWhitespace": "none",
+    "editor.renderWhitespace": "all",
     "terminal.integrated.fontSize": 10,
     "terminal.integrated.fontFamily": "monospace",
     "window.zoomLevel": -1,
@@ -93,5 +93,9 @@
       "puglint.enable": true,
       "highlightwords.defaultMode": {
         "default": 1
-      }  
+      },
+      "window.titleBarStyle": "custom",
+      "C_Cpp.default.cppStandard": "c++17",
+      "vetur.completion.tagCasing": "initial",
+      "vetur.format.defaultFormatter.ts": "vscode-typescript"
     }
