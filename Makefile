@@ -4,19 +4,34 @@ CODECS_KDE_YMP_URL = http://opensuse-community.org/codecs-kde.ymp
 CODECS_KDE_YMP = codecs-kde.ymp
 YAST2_ONE_KEY_INS = /usr/share/applications/yast2-metapackage-handler
 
+mklink = \
+	if [ -L $(2) ]; then \
+		echo "Symbolic link $(2) existed, skip."; \
+	elif [ -f $(2) ]; then \
+		echo "Make symbolic link: $(2) ---> $(1)"; \
+		rm -r $(2) && ln -s $(1) $(2); \
+	else \
+		echo "Target $(1) not exist, skip."; \
+	fi; \
+	exit 0;
+
+# ATTENTION!!!
+# 1. don't use "/" suffix on directory, because it `rm` will delete the source directory of a path with / suffix.
+# 2. $(2) will be delete, be careful the input.
 
 dotfiles :
-	-ln -s "${current_dir}/.gitconfig" ~/.gitconfig
-	-ln -s "${current_dir}/.hgrc" ~/.hgrc
-	-ln -s "${current_dir}/.tmux.conf" ~/.tmux.conf
-	-ln -s "${current_dir}/.zshrc" ~/.zshrc
-	-ln -s "${current_dir}/scripts" ~/.scripts
-	-ln -s "${current_dir}/.pentadactyl/" ~/.pentadactyl
-	-ln -s "${current_dir}/.pentadactylrc" ~/.pentadactylrc
-	-ln -s "${current_dir}/.config/QtProject/qtcreator/styles/" ~/.config/QtProject/qtcreator/styles
-	-ln -s "${current_dir}/.config/mpv/mpv.conf" ~/.config/mpv/mpv.conf
-	-ln -s "${current_dir}/.config/mpv/input.conf" ~/.config/mpv/input.conf
-	-ln -s "${current_dir}/.local/share/konsole" ~/.local/share/konsole
+	@$(call mklink,"${current_dir}/.gitconfig", ~/.gitconfig)
+	@$(call mklink,"${current_dir}/.hgrc", ~/.hgrc)
+	@$(call mklink,"${current_dir}/.tmux.conf", ~/.tmux.conf)
+	@$(call mklink,"${current_dir}/.zshrc", ~/.zshrc)
+	@$(call mklink,"${current_dir}/scripts", ~/.scripts)
+	@$(call mklink,"${current_dir}/.pentadactyl", ~/.pentadactyl)
+	@$(call mklink,"${current_dir}/.pentadactylrc", ~/.pentadactylrc)
+	@$(call mklink,"${current_dir}/.config/QtProject/qtcreator/styles", ~/.config/QtProject/qtcreator/styles)
+	@$(call mklink,"${current_dir}/.config/mpv/mpv.conf", ~/.config/mpv/mpv.conf)
+	@$(call mklink,"${current_dir}/.config/mpv/input.conf", ~/.config/mpv/input.conf)
+	@$(call mklink,"${current_dir}/.local/share/konsole", ~/.local/share/konsole)
+
 
 powerline-font :
 	git clone https://github.com/Lokaltog/powerline-fonts.git
