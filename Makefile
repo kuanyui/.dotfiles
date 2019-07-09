@@ -4,11 +4,12 @@ CODECS_KDE_YMP_URL = http://opensuse-community.org/codecs-kde.ymp
 CODECS_KDE_YMP = codecs-kde.ymp
 YAST2_ONE_KEY_INS = /usr/share/applications/yast2-metapackage-handler
 
+
 dotfiles :
-	-ln -s "${current_dir}/.gitconfig" ~/
-	-ln -s "${current_dir}/.hgrc" ~/
-	-ln -s "${current_dir}/.tmux.conf" ~/
-	-ln -s "${current_dir}/.zshrc" ~/
+	-ln -s "${current_dir}/.gitconfig" ~/.gitconfig
+	-ln -s "${current_dir}/.hgrc" ~/.hgrc
+	-ln -s "${current_dir}/.tmux.conf" ~/.tmux.conf
+	-ln -s "${current_dir}/.zshrc" ~/.zshrc
 	-ln -s "${current_dir}/scripts" ~/.scripts
 	-ln -s "${current_dir}/.pentadactyl/" ~/.pentadactyl
 	-ln -s "${current_dir}/.pentadactylrc" ~/.pentadactylrc

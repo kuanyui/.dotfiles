@@ -97,5 +97,6 @@
       "window.titleBarStyle": "custom",
       "C_Cpp.default.cppStandard": "c++17",
       "vetur.completion.tagCasing": "initial",
-      "vetur.format.defaultFormatter.ts": "vscode-typescript"
+      "vetur.format.defaultFormatter.ts": "vscode-typescript",
+      "files.trimTrailingWhitespace": true
     }
