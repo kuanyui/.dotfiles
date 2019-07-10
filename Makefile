@@ -11,11 +11,11 @@ VSCODE_EXTENSION_LIST_FILE = vscode-extension-list
 mklink = \
 	if [ -L $(2) ]; then \
 		echo "Symbolic link $(2) existed, skip."; \
-	elif [ -f $(2) ]; then \
+	elif [ -f $(2) -o -d $(2) ]; then \
 		echo "Make symbolic link: $(2) ---> $(1)"; \
 		rm -r $(2) && ln -s $(1) $(2); \
 	else \
-		echo "Target $(1) not exist, skip."; \
+		echo "Target $(2) not exist, skip."; \
 	fi; \
 	exit 0;
 
@@ -34,6 +34,7 @@ dotfiles :
 	@$(call mklink,"${current_dir}/.config/QtProject/qtcreator/styles", ~/.config/QtProject/qtcreator/styles)
 	@$(call mklink,"${current_dir}/.config/mpv/mpv.conf", ~/.config/mpv/mpv.conf)
 	@$(call mklink,"${current_dir}/.config/mpv/input.conf", ~/.config/mpv/input.conf)
+	@$(call mklink,"${current_dir}/.config/Code/User", ~/.config/Code/User)
 	@$(call mklink,"${current_dir}/.local/share/konsole", ~/.local/share/konsole)
 
 vscode-extension-save:

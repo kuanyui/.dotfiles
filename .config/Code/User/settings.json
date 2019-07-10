@@ -12,7 +12,7 @@
     "editor.renderWhitespace": "all",
     "terminal.integrated.fontSize": 10,
     "terminal.integrated.fontFamily": "monospace",
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
     "typescript.locale": "en",
     "bracketPairColorizer.forceUniqueOpeningColor": true,
