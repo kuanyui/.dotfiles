@@ -1,8 +1,12 @@
+.PHONY: dotfiles vscode-extension-save powerline-font quicklisp emacs clean
 current_dir = $(shell pwd)
 # openSUSE
 CODECS_KDE_YMP_URL = http://opensuse-community.org/codecs-kde.ymp
 CODECS_KDE_YMP = codecs-kde.ymp
 YAST2_ONE_KEY_INS = /usr/share/applications/yast2-metapackage-handler
+
+VSCODE = $(shell [ -f ~/.vscode/VSCode-linux-x64/bin/code ] && echo ~/.vscode/VSCode-linux-x64/bin/code || echo "/usr/bin/code")
+VSCODE_EXTENSION_LIST_FILE = vscode-extension-list
 
 mklink = \
 	if [ -L $(2) ]; then \
@@ -32,6 +36,16 @@ dotfiles :
 	@$(call mklink,"${current_dir}/.config/mpv/input.conf", ~/.config/mpv/input.conf)
 	@$(call mklink,"${current_dir}/.local/share/konsole", ~/.local/share/konsole)
 
+vscode-extension-save:
+	@echo Writing file ./$(VSCODE_EXTENSION_LIST_FILE) ...
+	@$(VSCODE) --list-extensions > $(VSCODE_EXTENSION_LIST_FILE)
+	@echo =============================================================
+	@cat $(VSCODE_EXTENSION_LIST_FILE)
+	@echo =============================================================
+	@echo Done.
+
+vscode-extension-install:
+	@while read -r line; do $(VSCODE) --install-extension "$$line"; done < $(VSCODE_EXTENSION_LIST_FILE)
 
 powerline-font :
 	git clone https://github.com/Lokaltog/powerline-fonts.git
