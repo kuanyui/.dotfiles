@@ -1,4 +1,4 @@
-# next lets set some enviromental/shell pref stuff up
+# next lets set some enviromental/shell pref stuff up2
 # setopt NOHUP
 #setopt NOTIFY
 #setopt NO_FLOW_CONTROL
@@ -276,6 +276,8 @@ alias jk='jkbiv'
 alias ff-addon-dev="cd ~/temp/addon-sdk-1.16/;source bin/activate;cd"
 alias youtube='youtube-dl --no-mtime'
 alias yt='youtube-dl --no-mtime --ignore-errors'
+alias ytn='youtube-dl --no-mtime --ignore-errors --no-playlist'
+
 alias yt18='youtube-dl --no-mtime --ignore-errors -f 18'
 alias yt22='youtube-dl --no-mtime --ignore-errors -f 22'
 
@@ -460,6 +462,15 @@ function cpn-viewer () {
     done
 }
 
+function skk () {
+    export GIT_SSH_COMMAND="ssh -o 'IdentitiesOnly=yes' -i ${HOME}/.ssh/homepage"
+    export PS1="${PS1} skk ==> "
+    if [[ ! $PWD = *"source-"* ]]; then
+        cd ~/source-h*
+    fi
+}
+
+
 alias list-color='for i in {0..16}; do echo $(tput setaf $i) tput setaf $i; done'
 
 export PATH=$PATH:${HOME}/rpi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin   # add this line at the end of file
@@ -477,4 +488,10 @@ sync
 reboot
 EOF
     fi
+}
+
+alias syna='xhost si:localuser:root;sudo synaptic'
+function androidfilenamefix () {
+    rename 's/}/]/g' *
+    rename 's/{/[/g' *
 }
