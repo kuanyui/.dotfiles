@@ -1,9 +1,6 @@
 [Appearance]
-ColorScheme=Yakuake
+ColorScheme=Ono Hiroko High Contrast (semi-transparent)
 
 [General]
 Name=Yakuake
 Parent=FALLBACK/
-
-[Scrolling]
-ScrollBarPosition=2
