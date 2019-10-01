@@ -11,9 +11,9 @@ VSCODE_EXTENSION_LIST_FILE = vscode-extension-list
 mklink = \
 	if [ -L $(2) ]; then \
 		echo "Symbolic link $(2) existed, skip."; \
-	elif [ -f $(2) -o -d $(2) ]; then \
+	elif [ -f $(2) -o -d $(2) -o -n $(3) ]; then \
 		echo "Make symbolic link: $(2) ---> $(1)"; \
-		rm -r $(2) && ln -s $(1) $(2); \
+		rm -rf $(2) && ln -s $(1) $(2); \
 	else \
 		echo "Target $(2) not exist, skip."; \
 	fi; \
@@ -24,10 +24,10 @@ mklink = \
 # 2. $(2) will be delete, be careful the input.
 
 dotfiles :
-	@$(call mklink,"${current_dir}/.gitconfig", ~/.gitconfig)
-	@$(call mklink,"${current_dir}/.hgrc", ~/.hgrc)
-	@$(call mklink,"${current_dir}/.tmux.conf", ~/.tmux.conf)
-	@$(call mklink,"${current_dir}/.zshrc", ~/.zshrc)
+	@$(call mklink,"${current_dir}/.gitconfig", ~/.gitconfig, force)
+	@$(call mklink,"${current_dir}/.hgrc", ~/.hgrc, force)
+	@$(call mklink,"${current_dir}/.tmux.conf", ~/.tmux.conf, force)
+	@$(call mklink,"${current_dir}/.zshrc", ~/.zshrc, force)
 	@$(call mklink,"${current_dir}/scripts", ~/.scripts)
 	@$(call mklink,"${current_dir}/.pentadactyl", ~/.pentadactyl)
 	@$(call mklink,"${current_dir}/.pentadactylrc", ~/.pentadactylrc)
