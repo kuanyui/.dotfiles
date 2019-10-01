@@ -98,5 +98,6 @@
       "C_Cpp.default.cppStandard": "c++17",
       "vetur.completion.tagCasing": "initial",
       "vetur.format.defaultFormatter.ts": "vscode-typescript",
-      "files.trimTrailingWhitespace": true
+      "files.trimTrailingWhitespace": true,
+      "go.gotoSymbol.includeImports": true
     }
