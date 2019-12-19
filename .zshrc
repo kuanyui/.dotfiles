@@ -463,7 +463,14 @@ function cpn-viewer () {
 }
 
 function skk () {
-    export GIT_SSH_COMMAND="ssh -o 'IdentitiesOnly=yes' -i ${HOME}/.ssh/homepage"
+    if [ -f "${HOME}/.ssh/homepage" ]; then
+        export GIT_SSH_COMMAND="ssh -o 'IdentitiesOnly=yes' -i ${HOME}/.ssh/homepage"
+    elif [ -f "${HOME}/.ssh/homepage-mbp" ]; then
+        export GIT_SSH_COMMAND="ssh -o 'IdentitiesOnly=yes' -i ${HOME}/.ssh/homepage-mbp"
+    else
+        echo "[ERROR] no correct ssh key found, abort"
+        exit 1
+    fi
     export PS1="${PS1} skk ==> "
     if [[ ! $PWD = *"source-"* ]]; then
         cd ~/source-h*
