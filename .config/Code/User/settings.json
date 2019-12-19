@@ -7,7 +7,6 @@
       "comments": true,
       "strings": true
     },
-    "workbench.colorTheme": "One Monokai",
     "breadcrumbs.enabled": true,
     "editor.renderWhitespace": "all",
     "terminal.integrated.fontSize": 10,
@@ -18,7 +17,7 @@
     "bracketPairColorizer.forceUniqueOpeningColor": true,
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "highlight.regexes": {
-        "(/?/? ?TODO:?)(.*)": [
+        "(/?/? ?TODO[: ]])(.*)": [
           {
             "overviewRulerColor": "#ffcc00",
             "backgroundColor": "#ffcc00",
@@ -99,5 +98,48 @@
       "vetur.completion.tagCasing": "initial",
       "vetur.format.defaultFormatter.ts": "vscode-typescript",
       "files.trimTrailingWhitespace": true,
-      "go.gotoSymbol.includeImports": true
+      "go.gotoSymbol.includeImports": true,
+      "go.lintFlags": [
+        "\"--exclude=\\\"\\bexported \\\\w+ (\\\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\\\"\""
+      ],
+      "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "git-commit",
+        "go",
+        "handlebars",
+        "haskell",
+        "html",
+        "jade",
+        "java",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "jsonc",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pug",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scala",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "yaml",
+        "yml"
+      ],
+      "editor.formatOnType": true,
+      "workbench.colorTheme": "One Monokai",
+      "files.exclude": {
+        "/lib/": true
+      }
     }

@@ -1,11 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
-        "key": "tab",
-        "command": "emacs-tab.reindentCurrentLine",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "shift+f2",
         "command": "editor.action.goToDeclaration",
         "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
@@ -324,5 +319,17 @@
         "key": "ctrl+shift+a",
         "command": "-editor.action.blockComment",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+o",
+        "command": "workbench.action.files.openFolder"
+    },
+    {
+        "key": "ctrl+k ctrl+o",
+        "command": "-workbench.action.files.openFolder"
+    },
+    {
+        "key": "tab",
+        "command": "tab"
     }
 ]
