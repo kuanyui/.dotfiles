@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Ono Hiroko High Contrast (semi-transparent)
+ColorScheme=Ono Hiroko High Contrast
 
 [General]
 Name=プロファイル “1”
