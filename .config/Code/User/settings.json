@@ -7,17 +7,17 @@
       "comments": true,
       "strings": true
     },
+    "tslint.autoFixOnSave": true,
     "breadcrumbs.enabled": true,
-    "editor.renderWhitespace": "all",
-    "terminal.integrated.fontSize": 10,
-    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontFamily": " 'DejaVu Sans Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "window.zoomLevel": 0,
     "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
     "typescript.locale": "en",
     "bracketPairColorizer.forceUniqueOpeningColor": true,
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "highlight.regexes": {
-        "(/?/? ?TODO[: ]])(.*)": [
+        "(/?/? ?(?:TODO|REFACTORING):?)(.*)": [
           {
             "overviewRulerColor": "#ffcc00",
             "backgroundColor": "#ffcc00",
@@ -26,6 +26,18 @@
           },
           {
             "backgroundColor": "#d9ad00",
+            "color": "#1f1f1f"
+          }
+        ],
+        "(/?/? ?(?:NOTE|DISCUSS):?)(.*)": [
+          {
+            "overviewRulerColor": "#00ccff",
+            "backgroundColor": "#00ccff",
+            "color": "#1f1f1f",
+            "fontWeight": "bold"
+          },
+          {
+            "backgroundColor": "#55ddff",
             "color": "#1f1f1f"
           }
         ],
@@ -41,7 +53,7 @@
             "color": "#1f1f1f"
           }
         ],
-        "(/?/? ?DEPRECATED:?)(.*)": [
+        "(/?/? ?(?:DEPRECATED):?)(.*)": [
           {
             "overviewRulerColor": "#ff6600",
             "backgroundColor": "#ff6600",
@@ -50,6 +62,18 @@
           },
           {
             "backgroundColor": "#d95500",
+            "color": "#1f1f1f"
+          }
+        ],
+        "(/?/? ?ATTENTION:?)(.*)": [
+          {
+            "overviewRulerColor": "#ff5555",
+            "backgroundColor": "#ff5555",
+            "color": "#1f1f1f",
+            "fontWeight": "bold"
+          },
+          {
+            "backgroundColor": "#aa4444",
             "color": "#1f1f1f"
           }
         ],
@@ -64,18 +88,20 @@
       "search.smartCase": true,
       "colorHelper.disableGpu": 1,
       "workbench.iconTheme": "material-icon-theme",
-      "todo.embedded.providers.ag.regex": "(?:#|//|/\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|DEPRECATED)",
-      "todo.embedded.providers.rg.regex": "(?:#|//|/\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|DEPRECATED)",
-      "todo.embedded.regex": "(?:<!-- *)?(?:#|//|/\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(TODO|FIXME|FIX|BUG|DEPRECATED|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))",
+      "todo.embedded.providers.ag.regex": "(?:#|//|/\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|DEPRECATED|DISCUSS|SPEC)",
+      "todo.embedded.providers.rg.regex": "(?:#|//|/\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|DEPRECATED|DISCUSS|SPEC)",
+      "todo.embedded.regex": "(?:<!-- *)?(?:#|//|/\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|DEPRECATED|DISCUSS|SPEC)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))",
       "todo.colors.types": {
         "TODO": "#ffcc00",
-        "FIXME": "#cc0000",
+        "FIXME": "#ff0000",
         "FIX": "#cc0000",
-        "BUG": "#cc0000",
+        "BUG": "#ff0000",
         "UGLY": "#cc0000",
         "DEBUG": "#cc0000",
         "HACK": "#cc0000",
+        "ATTENTION": "#ff6600",
         "DEPRECATED": "#ff6600",
+        "DISCUSS": "#ffcc00",
         "REVIEW": "#00ccff",
         "OPTIMIZE": "#00ccff",
         "TSC": "#00ccff",
@@ -141,5 +167,12 @@
       "workbench.colorTheme": "One Monokai",
       "files.exclude": {
         "/lib/": true
+      },
+      "editor.suggestSelection": "first",
+      "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+      "typescript.updateImportsOnFileMove.enabled": "always",
+      "search.exclude": {
+        "**/*.min.js": true,
+        "package-lock.json": true
       }
     }
