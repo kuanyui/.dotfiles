@@ -221,7 +221,7 @@ function command_not_found_handle() {
     /usr/bin/python /usr/lib/command-not-found -- $1
 }
 
-alias emacs='emacs -nw'
+#alias emacs='emacs -nw'
 alias ko='kde-open'
 alias xo='xdg-open'
 alias ta='if tmux attach-session -t 0;then;else tmux;fi'
@@ -234,7 +234,6 @@ alias hxp='hexo clean;hexo generate;hexo server --debug'
 alias hxd='hexo clean;hexo generate;hexo deploy'
 alias t='timer 04:53'
 alias dropboxd='~/.dropbox-dist/dropboxd &'
-alias copyagent='~/.copy/x86_64/CopyAgent &'
 # If adding a space in front of a command, the command won't be added into ~/.zsh_history
 setopt hist_ignore_space
 
@@ -250,6 +249,8 @@ alias glg="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgre
 alias gb="git branch"
 alias gc="git checkout"
 alias gs="git status"
+alias gp="git pull"
+alias gpf="git reset --hard HEAD; git pull"
 
 # List top ten largest files/directories in current directory
 alias ducks='du -cks *|sort -rn|head -11'
@@ -321,7 +322,7 @@ alias wine64='WINEPREFIX=~/.wine;WINEARCH= ;wine'
 
 
 alias transcription-pdf-update='cp -u -v ~/University/Transcription/PDF/* ~/source-kuanyui.github.io/source/transcription/;cd ~/source-kuanyui.github.io/;npm-venv;hxd'
-alias piano-save='cd ~/University/;git add *.mscz;git commit;bgit push'
+alias piano-save='cd ~/University/;git add *.mscz;git commit;git push'
 alias zs='source ~/.zshrc'
 
 alias wkhtmltopdf='~/.wkhtmltox/bin/wkhtmltopdf'

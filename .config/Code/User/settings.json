@@ -11,13 +11,13 @@
     "breadcrumbs.enabled": true,
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.fontFamily": " 'DejaVu Sans Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
     "typescript.locale": "en",
     "bracketPairColorizer.forceUniqueOpeningColor": true,
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "highlight.regexes": {
-        "(/?/? ?(?:TODO|REFACTORING):?)(.*)": [
+        "(/?/? ?(?:TODO|REFACTORING|OPTIMIZE):?)(.*)": [
           {
             "overviewRulerColor": "#ffcc00",
             "backgroundColor": "#ffcc00",
@@ -29,7 +29,7 @@
             "color": "#1f1f1f"
           }
         ],
-        "(/?/? ?(?:NOTE|DISCUSS):?)(.*)": [
+        "(/?/? ?(?:NOTE|DISCUSS): )(.*)": [
           {
             "overviewRulerColor": "#00ccff",
             "backgroundColor": "#00ccff",
@@ -41,7 +41,7 @@
             "color": "#1f1f1f"
           }
         ],
-        "(/?/? ?FIXME:?)(.*)": [
+        "(/?/? ?FIXME: )(.*)": [
           {
             "overviewRulerColor": "#ff0000",
             "backgroundColor": "#ff0000",
@@ -53,7 +53,7 @@
             "color": "#1f1f1f"
           }
         ],
-        "(/?/? ?(?:DEPRECATED):?)(.*)": [
+        "(/?/? ?DEPRECATED: )(.*)": [
           {
             "overviewRulerColor": "#ff6600",
             "backgroundColor": "#ff6600",
@@ -65,7 +65,7 @@
             "color": "#1f1f1f"
           }
         ],
-        "(/?/? ?ATTENTION:?)(.*)": [
+        "(/?/? ?ATTENTION: )(.*)": [
           {
             "overviewRulerColor": "#ff5555",
             "backgroundColor": "#ff5555",
@@ -128,7 +128,7 @@
       "go.lintFlags": [
         "\"--exclude=\\\"\\bexported \\\\w+ (\\\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\\\"\""
       ],
-      "cSpell.enabledLanguageIds": [
+      "cSpell.enableFiletypes": [
         "asciidoc",
         "c",
         "cpp",
@@ -173,6 +173,42 @@
       "typescript.updateImportsOnFileMove.enabled": "always",
       "search.exclude": {
         "**/*.min.js": true,
-        "package-lock.json": true
-      }
+        "**/*.pb*": true,
+        "**/apidoc*.swagger.json": true,
+        "/dist/assets": true,
+        "/server/": true,
+        "client/helps": true,
+        "dist/": true,
+        "package-lock.json": true,
+        "third_party": true
+      },
+      "workbench.colorCustomizations": {},
+      "outline.showArrays": false,
+      "outline.showBooleans": false,
+      "outline.showConstants": false,
+      "outline.showConstructors": false,
+      "outline.showEnumMembers": false,
+      "outline.showEnums": false,
+      "outline.showEvents": false,
+      "outline.showInterfaces": false,
+      "outline.showFiles": false,
+      "outline.showStrings": false,
+      "outline.showStructs": false,
+      "outline.showObjects": false,
+      "outline.showOperators": false,
+      "outline.showPackages": false,
+      "outline.showVariables": false,
+      "outline.showTypeParameters": false,
+      "outline.showNull": false,
+      "outline.showNumbers": false,
+      "javascript.updateImportsOnFileMove.enabled": "always",
+      "go.useLanguageServer": true,
+      "editor.colorDecorators": false,
+      "editor.renderControlCharacters": true,
+      "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning",
+        "info"
+      ],
+      "explorer.confirmDragAndDrop": false
     }
