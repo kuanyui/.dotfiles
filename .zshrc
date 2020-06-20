@@ -503,3 +503,5 @@ function androidfilenamefix () {
     rename 's/}/]/g' *
     rename 's/{/[/g' *
 }
+
+alias y='cd ~/tmp; youtube-dl'
