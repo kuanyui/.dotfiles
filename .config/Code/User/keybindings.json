@@ -166,10 +166,6 @@
         "command": "cursorWordLeft"
     },
     {
-        "key": "alt+f",
-        "command": "cursorWordPartRight"
-    },
-    {
         "key": "ctrl+alt+f",
         "command": "cursorWordRight"
     },
@@ -396,5 +392,53 @@
         "key": "ctrl+up",
         "command": "-selectPrevSuggestion",
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+'",
+        "command": "highlightwords.addHighlight"
+    },
+    {
+        "key": "alt+f",
+        "command": "cursorWordPartRight"
+    },
+    {
+        "key": "alt+e",
+        "command": "toggleFindCaseSensitive",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleFindCaseSensitive",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+e",
+        "command": "toggleSearchCaseSensitive",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleSearchCaseSensitive",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+e",
+        "command": "toggleSearchEditorCaseSensitive",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleSearchEditorCaseSensitive",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindFocused || terminalFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindFocused || terminalFocus"
     }
 ]

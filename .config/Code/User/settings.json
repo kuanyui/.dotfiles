@@ -17,7 +17,7 @@
     "bracketPairColorizer.forceUniqueOpeningColor": true,
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "highlight.regexes": {
-        "(/?/? ?(?:TODO|REFACTORING|OPTIMIZE):?)(.*)": [
+        "(/?/? ?(?:TODO|REFACTORING|OPTIMIZE): )(.*)": [
           {
             "overviewRulerColor": "#ffcc00",
             "backgroundColor": "#ffcc00",
