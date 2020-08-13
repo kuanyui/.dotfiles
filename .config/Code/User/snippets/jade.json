@@ -12,5 +12,12 @@
 			"{{ \\$t('$0') }}"
 		],
 		"description": "{{ $t('') }}"
+	},
+	"p-hint": {
+		"prefix": "ph",
+		"body": [
+			"p-hint=\"$0\""
+		],
+		"description": "p-hint=\"\""
 	}
 }

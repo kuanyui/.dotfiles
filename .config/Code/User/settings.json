@@ -175,7 +175,6 @@
         "**/*.min.js": true,
         "**/*.pb*": true,
         "**/apidoc*.swagger.json": true,
-        "/dist/assets": true,
         "/server/": true,
         "client/helps": true,
         "dist/": true,

@@ -478,6 +478,8 @@ function skk () {
     fi
 }
 
+alias ded='make -C `echo L2hvbWUvb25vaGlyb2tvL3Byb2plY3RzL3R0cy12b2xjYWJ1bGFyeS1sZXNzb24vZGF0YS8K | base64 -d`'
+alias dedc='cd `echo L2hvbWUvb25vaGlyb2tvL3Byb2plY3RzL3R0cy12b2xjYWJ1bGFyeS1sZXNzb24vZGF0YS8K | base64 -d`; git add -A && git commit -m "dictionary update `date +%Y-%m-%dT8%H:%M`";cd -'
 
 alias list-color='for i in {0..16}; do echo $(tput setaf $i) tput setaf $i; done'
 

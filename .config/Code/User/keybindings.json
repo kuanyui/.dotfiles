@@ -174,14 +174,6 @@
         "command": "cursorWordPartLeft"
     },
     {
-        "key": "ctrl+e",
-        "command": "cursorLineEnd"
-    },
-    {
-        "key": "ctrl+a",
-        "command": "cursorLineStart"
-    },
-    {
         "key": "ctrl+k",
         "command": "deleteAllRight"
     },
@@ -440,5 +432,45 @@
         "key": "alt+c",
         "command": "-workbench.action.terminal.toggleFindCaseSensitive",
         "when": "terminalFindFocused || terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+'",
+        "command": "extension.selectDoubleQuote",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k shift+'",
+        "command": "-extension.selectDoubleQuote",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "extension.selectSingleQuote",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k '",
+        "command": "-extension.selectSingleQuote",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "home",
+        "command": "-cursorHome",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "end",
+        "command": "-cursorEnd",
+        "when": "textInputFocus"
     }
 ]
