@@ -17,61 +17,61 @@ Color=24,24,24
 Color=104,104,104
 
 [Color1]
-Color=178,24,24
+Color=255,83,83
 
 [Color1Faint]
 Color=101,0,0
 
 [Color1Intense]
-Color=255,84,84
+Color=255,130,130
 
 [Color2]
-Color=24,178,24
+Color=159,255,57
 
 [Color2Faint]
 Color=0,101,0
 
 [Color2Intense]
-Color=178,244,36
+Color=206,255,101
 
 [Color3]
-Color=178,134,0
+Color=255,247,14
 
 [Color3Faint]
 Color=101,94,0
 
 [Color3Intense]
-Color=255,170,0
+Color=255,203,48
 
 [Color4]
-Color=23,155,185
+Color=93,190,255
 
 [Color4Faint]
 Color=0,0,101
 
 [Color4Intense]
-Color=32,214,255
+Color=178,211,255
 
 [Color5]
-Color=217,60,139
+Color=247,94,193
 
 [Color5Faint]
 Color=101,0,101
 
 [Color5Intense]
-Color=255,107,191
+Color=255,188,240
 
 [Color6]
-Color=101,188,182
+Color=137,255,245
 
 [Color6Faint]
 Color=0,101,101
 
 [Color6Intense]
-Color=121,226,219
+Color=166,255,252
 
 [Color7]
-Color=178,178,178
+Color=255,255,255
 
 [Color7Faint]
 Color=101,101,101
@@ -80,7 +80,7 @@ Color=101,101,101
 Color=238,238,238
 
 [Foreground]
-Color=200,200,200
+Color=194,194,194
 
 [ForegroundFaint]
 Color=101,101,101
@@ -90,6 +90,7 @@ Color=255,255,255
 
 [General]
 Blur=false
+ColorRandomization=false
 Description=High-contrast by Ono Hiroko
 Opacity=1
 Wallpaper=

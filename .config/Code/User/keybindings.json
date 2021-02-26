@@ -444,7 +444,7 @@
         "when": "editorFocus"
     },
     {
-        "key": "ctrl+'",
+        "key": "alt+s '",
         "command": "extension.selectSingleQuote",
         "when": "editorFocus"
     },
@@ -472,5 +472,59 @@
         "key": "end",
         "command": "-cursorEnd",
         "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+s [",
+        "command": "extension.selectSquareBrackets",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k [",
+        "command": "-extension.selectSquareBrackets",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+s alt+0",
+        "command": "extension.selectParenthesisOuter",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k shift+0",
+        "command": "-extension.selectParenthesisOuter",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+s shift+alt+]",
+        "command": "extension.selectCurlyBracketsOuter",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k shift+]",
+        "command": "-extension.selectCurlyBracketsOuter",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+s ]",
+        "command": "extension.selectSquareBracketsOuter",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k ]",
+        "command": "-extension.selectSquareBracketsOuter",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+s alt+9",
+        "command": "extension.selectParenthesis",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k shift+9",
+        "command": "-extension.selectParenthesis",
+        "when": "editorFocus"
     }
 ]

@@ -487,7 +487,7 @@ alias list-color='for i in {0..16}; do echo $(tput setaf $i) tput setaf $i; done
 export PATH=$PATH:${HOME}/rpi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin   # add this line at the end of file
 export PATH="${PATH}:${HOME}/.vscode/VSCode-linux-x64/"
 export PATH=$PATH:/snap/bin
-alias emacsx="'emacs' -x > /dev/null 2>&1 &"
+alias emacsx="'emacs' -x --debug-init > /dev/null 2>&1 &"
 
 function c2debug () {
     if [ -e $1 ]; then
@@ -508,3 +508,6 @@ function androidfilenamefix () {
 }
 
 alias y='cd ~/tmp; youtube-dl'
+function show-largest-package () {
+    pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -hr | head -35
+}

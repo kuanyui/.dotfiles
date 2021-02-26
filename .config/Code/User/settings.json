@@ -209,5 +209,14 @@
         "warning",
         "info"
       ],
-      "explorer.confirmDragAndDrop": false
+      "explorer.confirmDragAndDrop": false,
+      "bracket-pair-colorizer-2.colors": [
+
+        "Gold",
+        "Orchid",
+        "LightSkyBlue"
+      ],
+      "puglint.config": {
+
+      }
     }
