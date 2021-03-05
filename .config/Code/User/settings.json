@@ -218,5 +218,6 @@
       ],
       "puglint.config": {
 
-      }
+      },
+      "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?"
     }
