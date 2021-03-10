@@ -5,6 +5,8 @@
   <style name="Selection" foreground="#303030" background="#d7ff87"/>
   <style name="LineNumber" foreground="#eeedd0" background="#5b5952"/>
   <style name="SearchResult" foreground="#ffffff" background="#ff1f8b"/>
+  <style name="SearchResultAlt1" foreground="#000033" background="#b6ccff"/>
+  <style name="SearchResultAlt2" foreground="#330000" background="#ffb6cc"/>
   <style name="SearchScope" foreground="#4d4d4c" background="#34322b"/>
   <style name="Parentheses" foreground="#4d4d4c" background="#d6d6d6"/>
   <style name="ParenthesesMismatch" foreground="#ffffff" background="#a40000"/>
@@ -27,6 +29,7 @@
   <style name="PrimitiveType" foreground="#5fafd7"/>
   <style name="Operator" foreground="#ffffff"/>
   <style name="Overloaded Operator"/>
+  <style name="Punctuation"/>
   <style name="Preprocessor" foreground="#ffd323"/>
   <style name="Label" foreground="#ffffff" bold="true" italic="true"/>
   <style name="Comment" foreground="#6c6c6c" italic="true"/>
@@ -56,12 +59,17 @@
   <style name="DiffDestLine" foreground="#4d4d4c" background="#ffbbff"/>
   <style name="DiffDestChar" foreground="#4d4d4c" background="#add8e6"/>
   <style name="LogChangeLine" foreground="#c00000"/>
+  <style name="LogAuthorName" foreground="#007af4"/>
+  <style name="LogCommitDate" foreground="#006600"/>
+  <style name="LogCommitHash" foreground="#ff0000"/>
+  <style name="LogCommitSubject"/>
+  <style name="LogDecoration" foreground="#ff00ff"/>
   <style name="Warning" underlineColor="#ffbe00" underlineStyle="SingleUnderline"/>
   <style name="WarningContext" underlineColor="#ffbe00" underlineStyle="DotLine"/>
   <style name="Error" underlineColor="#dd0000" underlineStyle="SingleUnderline"/>
   <style name="ErrorContext" underlineColor="#dd0000" underlineStyle="DotLine"/>
   <style name="Declaration"/>
   <style name="FunctionDefinition"/>
-  <style name="OutputArgument" foreground="#000000" background="#ffffff" italic="true"/>
+  <style name="OutputArgument" foreground="#ff842c" italic="true"/>
   <style name="LastStyleSentinel" foreground="#8e908c"/>
 </style-scheme>
