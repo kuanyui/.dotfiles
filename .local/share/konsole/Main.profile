@@ -13,4 +13,4 @@ Name=Main
 Parent=FALLBACK/
 
 [Keyboard]
-KeyBindings=linux
+KeyBindings=default

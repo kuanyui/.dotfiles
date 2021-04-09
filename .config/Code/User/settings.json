@@ -11,7 +11,6 @@
     "breadcrumbs.enabled": true,
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.fontFamily": " 'DejaVu Sans Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "window.zoomLevel": -1,
     "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
     "typescript.locale": "en",
     "bracketPairColorizer.forceUniqueOpeningColor": true,
@@ -219,5 +218,8 @@
       "puglint.config": {
 
       },
-      "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?"
+      "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+      "terminal.integrated.scrollback": 2000,
+      "css.lint.emptyRules": "ignore",
+      "window.zoomLevel": -2
     }
