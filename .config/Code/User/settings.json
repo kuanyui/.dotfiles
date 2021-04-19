@@ -221,5 +221,7 @@
       "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
       "terminal.integrated.scrollback": 2000,
       "css.lint.emptyRules": "ignore",
-      "window.zoomLevel": -2
+			"window.zoomLevel": -2,
+			"less.lint.emptyRules": "ignore",
+			"scss.lint.emptyRules": "ignore"
     }

@@ -434,16 +434,6 @@
         "when": "terminalFindFocused || terminalFocus"
     },
     {
-        "key": "ctrl+shift+'",
-        "command": "extension.selectDoubleQuote",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+k shift+'",
-        "command": "-extension.selectDoubleQuote",
-        "when": "editorFocus"
-    },
-    {
         "key": "alt+s '",
         "command": "extension.selectSingleQuote",
         "when": "editorFocus"
@@ -525,6 +515,26 @@
     {
         "key": "ctrl+k shift+9",
         "command": "-extension.selectParenthesis",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-markdown.extension.onCopyLineDown",
+        "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId == 'markdown'"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "-markdown.extension.onCopyLineUp",
+        "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+'",
+        "command": "extension.selectEitherQuote",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k ;",
+        "command": "-extension.selectEitherQuote",
         "when": "editorFocus"
     }
 ]
